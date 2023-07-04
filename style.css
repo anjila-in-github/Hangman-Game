@@ -1,0 +1,51 @@
+
+.bg{
+    width:80%;
+    height: 100vh;
+    background-image:url(img.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.login-box{
+    width: 80%;
+    max-width: 250px;
+    height: 50px;
+    position:absolute;
+    top:48%;
+    left:32%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    padding: 50px 60px 70px ;
+    text-align: center;
+}
+
+.login-box  h1{
+    font-size: 500%;
+    color: rgba(137, 6, 139, 0.991);
+}
+
+.input-field{
+    background: #a4a4c9;
+    margin:10px 10px;
+    border-radius: 15px ;
+    display:flex;
+    align-items:center;
+
+}
+
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline:0;
+    padding: 18px ;
+}
+
+.input-field i{
+    margin-left: 15px;
+    color: rgb(89, 4, 104);
+
+}
+
