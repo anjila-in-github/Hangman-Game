@@ -128,6 +128,19 @@ body{
     border: 2px solid #f5f3f480;
     border-radius:20px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 30px #ae4694;
+    box-shadow: 0 0 30px #ae5d9a;
        
 }   
+
+/*Choose Category.html*/
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;   
+}
+
+p{
+    font-size: large;
+    color: #fffdff;    
+}
