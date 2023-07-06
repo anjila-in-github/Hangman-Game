@@ -58,7 +58,7 @@ input{
 
 .btn button{
     flex-basis: 90%;
-    background:#967584;
+    background:#160e28;
     color: #ffffff;
     height:40px;
     border-radius: 20px;
@@ -115,7 +115,7 @@ body{
 
 #particles-js{
     height:100%;
-    background:#e6bbce;
+    background:#160e28;
 }
 
 .wrapper{
@@ -125,9 +125,9 @@ body{
     width: 350px;
     height: 135px;
     background: transparent;   
-    border: 2px solid rgba(117, 12, 58, 0.5);
+    border: 2px solid #f5f3f480;
     border-radius:20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(70, 20, 20, 5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px #ae4694;
        
 }   
