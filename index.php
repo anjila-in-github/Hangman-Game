@@ -15,4 +15,10 @@
     <center>
         <a href="category.php">SELECT CATEGORY</a>
 </center>
+
+ 
+<script type="text/javascript" src="particles.js"></script>    
+<script type="text/javascript" src="app.js"></script> 
+
+</body>
 </html> 
