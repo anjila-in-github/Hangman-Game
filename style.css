@@ -1,7 +1,12 @@
+*{
+    text-decoration: none;
+    text-transform: capitalize;
+    
+}
 /*index.html*/
 .bg{
-    width:80%;
-    height: 100vh;
+    width:70%;
+    height: 100%;
     background-image:url(img.png);
     background-position:center;
     background-size:cover;
@@ -11,9 +16,9 @@
 .login-box{
     width: 80%;
     max-width: 250px;
-    height: 300px;
+    height: 250px;
     position:absolute;
-    top:65%;
+    top:63%;
     left:40%;
     transform: translate(-50%,-50%);
     background: #ffffff;
@@ -59,7 +64,7 @@ input{
 
 .btn button{
     flex-basis: 90%;
-    background:#160e28;
+    background:#1d1336;
     color: #ffffff;
     height:40px;
     border-radius: 20px;
@@ -91,12 +96,14 @@ body{
 }
 .bt1 button{
     flex-basis: 60%;
-    background:#fffdff;
-    color: #080707;
+    background:#000000;
+    color: #ffffff;
     height:70px;
     border-radius: 20px;
     cursor: pointer;   
-    font-size: 100%; 
+    font-size: 100%;  
+    border-width: 5px;   
+    border-color: #dfdfe1;
 }
 
 .bt2{
@@ -106,17 +113,20 @@ body{
 }
 .bt2 button{
     flex-basis: 60%;
-    background:rgb(255, 253, 255);
-    color: #080707;
+    background:#000000;
+    color: #ffffff;
     height:70px;
     border-radius: 20px;
     cursor: pointer;   
     font-size: 100%; 
+    border-width: 5px;
+    border-color: #dfdfe1;
 }
 
 #particles-js{
     height:100%;
-    background:#160e28;
+    /*background:#160e28;*/
+    background:#060613;
 }
 
 .wrapper{
@@ -129,20 +139,20 @@ body{
     border: 2px solid #f5f3f480;
     border-radius:20px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 30px #ae5d9a;
+    box-shadow: 0 0 30px #ffffff;
        
 }   
 .bt1 i{
     margin-left: 5px;
     margin-right: 15px;
-    color: #401dbf;
-    size: 100px;
+    color: #F6FA70;
+    size: 100px;    
 }
 
 .bt2 i{
     margin-left: 5px;
     margin-right: 15px;
-    color: rgb(188, 13, 30);
+    color: #c79d10d8;
 }
 
 /*Choose Category.html*/
