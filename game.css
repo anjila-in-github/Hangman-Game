@@ -113,21 +113,3 @@ canvas{
 .lose-msg{
     color:#fe5152;
 }
-
-/*
-.bt2{
-    width:100%;
-    display:flex;
-    justify-content:center;
-}
-.bt2 button{
-    flex-basis: 60%;
-    background:#000000;
-    color: #ffffff;
-    height:70px;
-    border-radius: 20px;
-    cursor: pointer;   
-    font-size: 100%; 
-    border-width: 5px;
-    border-color: #dfdfe1;
-}
