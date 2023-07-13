@@ -138,7 +138,11 @@ canvas{
     cursor: pointer;    
     border-color: #dfdfe1;
 }
-.end{
+.end{   
+    display:flex;
+    justify-content:center;
+}
+.end button{
     font-size:15px;  
      font-weight: bold;  
      flex-basis: 10%;

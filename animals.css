@@ -139,19 +139,23 @@ canvas{
     cursor: pointer;    
     border-color: #dfdfe1;    
 }
-.end{
+.end{   
+    display:flex;
+    justify-content:center;
+}
+.end button{
     font-size:15px;  
-     font-weight: bold;  
-     flex-basis: 10%;
-     position:absolute;   
-     top:86%;
-     left:60%;    
-     padding:1em;
-     border-radius: 0.6em; 
-     background:#000000;
-     color: #ffffff;   
-     cursor: pointer;  
-     border-color:#dfdfe1;
+    font-weight: bold;  
+    flex-basis: 10%;
+    position:absolute;   
+    top:86%;
+    left:60%;    
+    padding:1em;
+    background:#000000;
+    border-radius: 0.6em; 
+    color: #ffffff;   
+    cursor: pointer;    
+    border-color: #dfdfe1;  
  }
  button:hover{
      box-shadow: 0 0 5px cyan,
