@@ -1,0 +1,68 @@
+<html>
+<head>
+  <title>Countdown Timer</title>
+  <style>
+    .container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 130px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    .reset-button {
+      position: fixed;
+      top: 150px;
+      right: 35px;
+      padding: 15px 25px;
+      background-color: #f1f1f1;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span id="timer">10</span>
+  </div>
+  
+  <button class="reset-button" onclick="resetTimer()">Reset</button>
+  
+  <script>
+    var timerElement = document.getElementById('timer');
+    var timeLeft = 10;
+    var countdownInterval;
+    
+    function startTimer() {
+      countdownInterval = setInterval(updateTimer, 1000);
+    }
+    
+    function updateTimer() {
+      timeLeft--;
+      timerElement.textContent = timeLeft;
+      
+      if (timeLeft === 0) {
+        clearInterval(countdownInterval);
+        timerElement.textContent = "Time's Up!";
+      }
+    }
+    
+    function resetTimer() {
+      clearInterval(countdownInterval);
+      timeLeft = 10;
+      timerElement.textContent = timeLeft;
+    }
+    
+    startTimer();
+  </script>
+</body>
+</html>
