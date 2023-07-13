@@ -150,8 +150,8 @@ canvas{
     background:#000000;
     color: #ffffff;   
     cursor: pointer;       
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan;
+    border-color:#dfdfe1;
+
 }
 button:hover{
     box-shadow: 0 0 5px cyan,
