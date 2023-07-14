@@ -20,7 +20,6 @@ body{
     position: relative;
     display: flex;
 }
-
 .bubbles span{
     position: relative;
     width: 30px;
@@ -34,14 +33,12 @@ body{
     animation: animate 15s linear infinite;
     animation-duration: calc(125s / var(--i));
 }
-.bubbles span:nth-child(even)
-{
+.bubbles span:nth-child(even){
     background:#ff2d75;
     box-shadow: 0 0 0 10px #ff2d7544,
     0 0 50px #ff2d75,
     0 0 100px #ff2d75;
 }
-
 @keyframes animate
 {
     0%
@@ -61,8 +58,9 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 250px;
+    height: 150px;
     padding: 20px;
-    background: #000;
+    background: #101010;
     color: #fff;
     text-align: center;
     box-shadow:0 0 30px #ffffff;
@@ -86,66 +84,54 @@ body{
     font-size: 24px;
 
 }
-.box label{
-    position: relative;
-    cursor: pointer;
+.yes{   
+    display:flex;
+    justify-content:center;
 }
-.box label input{
-    display: none;
+.yes button{
+    font-size:12px;  
+    font-weight: bold;  
+    flex-basis: 10%;
+    position:absolute;   
+    top:60%;
+    left:20%;    
+    padding:1em;
+    border-radius: 0.6em; 
+    background:#000000;
+    color: #ffffff;   
+    cursor: pointer;       
+    border-color:#dfdfe1;
 }
-.box label span{
-    position: relative;
-    display: inline-block;
-    margin:20px 10px;
-    padding:5px;
-    width:50px;
-    background: #000;
-    border:1px solid #444;
-    color:#444;
-    border-radius: 4px;
+
+.no{   
+    display:flex;
+    justify-content:center;
 }
-.bx label input:checked ~ span{
-    color:#fff;
-    border: 1px solid #008eff;
+.no button{
+    font-size:12px;  
+    font-weight: bold;  
+    flex-basis: 10%;
+    position:absolute;   
+    top:60%;
+    left:60%;    
+    padding:1em;
+    border-radius: 0.6em; 
+    background:#000000;
+    color: #ffffff;   
+    cursor: pointer;    
 }
-.box label input:checked ~span:before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #008eff;
-    z-index: -1;
-    filter: blur(10px);
-}
-.box label input:checked ~span:after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #008eff;
-    z-index: -1;
-    filter: blur(15px);
-}
-.box label input:checked~span.Yes{
+
+.yes button:hover{
     color:#62ff00;
     border-color: #62ff00;
     box-shadow: insert 0 0 10px #62ff00;
+    box-shadow: 0 0 5px #62ff00,
+    0 0 25px #62ff00;
 }
-.box label input:checked~span.Yes.before,
-.box label input:checked~span.Yes.after{
-    background: #62ff00;
-
-    }
-.box label input:checked  ~ span.No{
+.no button:hover{
     color:#ff0000;
     border-color: #ff0000;
     box-shadow: insert 0 0 10px #ff0000;
- }
- .box label input:checked~span.No.before,
-.box label input:checked~span.No.after{
-    background: #ff0000;
+    box-shadow: 0 0 5px #ff0000,
+    0 0 25px #ff0000;
 }

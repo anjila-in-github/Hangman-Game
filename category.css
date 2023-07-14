@@ -1,7 +1,6 @@
-
 /*category*/
 *{
-    font-family: 'Poppins';
+    font-family: "Poppins";
     margin:0; 
     padding:0;
     box-sizing: border-box;
@@ -69,4 +68,27 @@
     .container{
         padding:20px;
     }
+}
+
+.end{   
+    display:flex;
+    justify-content:center;
+}
+.end button{
+    font-size:15px;  
+    font-weight: bold;     
+    position:absolute;   
+    top:5%;
+    left:80%;    
+    padding:1em;
+    border-radius: 0.6em; 
+    background:#605c75;
+    color: #ffffff;   
+    cursor: pointer;      
+
+}
+button:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
 }

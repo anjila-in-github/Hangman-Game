@@ -2,25 +2,27 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>    
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap'>  
     <link rel="stylesheet" href="birds.css" />
     <script src="https://kit.fontawesome.com/935834ea02.js" crossorigin="anonymous"></script>
 </head>
-<body>       
+<body>  
+    <div id="particles-js">
+    
     <a href="category.html">
         <div class="btn">            
             <button>
                 BACK
             </button>    
         </div>
-    </a>    
-        <a href ="exit.html">
+    </a>
+    <a href ="exit.html">
     <div class="end">
            <button>
                 End Game
             </button>
         </div>
-        </a>
+    </a>
     <div class="container">
         <div id="options-container"></div>
         <div id="letter-container" class="letter-container hide"></div>
@@ -32,7 +34,12 @@
         </div>
     </div>
     
-    <script  src="birds.js"></script>
+    </div>
+    
+<script type="text/javascript" src="particles.js"></script>    
+<script type="text/javascript" src="app.js"></script> 
+
+<script  src="birds.js"></script>
 
 </body>
 </html>

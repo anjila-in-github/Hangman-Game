@@ -1,0 +1,122 @@
+*{    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;  
+    font-family: "Poppins";   
+    text-decoration: none;
+    text-transform: capitalize;       
+}
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;    
+    min-height:100vh;
+    background: #0c192c;
+}
+
+.bt1{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+.bt1 button{
+    flex-basis: 60%;
+    background:#000000;
+    color: #ffffff;
+    height:70px;
+    border-radius: 20px;
+    cursor: pointer;   
+    font-size: 20px;  
+    border-width: 5px;   
+    border-color: #dfdfe1;
+}
+
+.bt2{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+.bt2 button{
+    flex-basis: 60%;
+    background:#000000;
+    color: #ffffff;
+    height:70px;
+    border-radius: 20px;
+    cursor: pointer;   
+    font-size: 20px; 
+    border-width: 5px;
+    border-color: #dfdfe1;
+}
+
+.wrapper{
+    position:absolute;
+    top:50%;
+    left:50%;   
+    transform: translate(-50%,-50%); 
+    width: 300px;
+    height: 210px;
+    background: transparent;      
+    border: 2px solid #f5f3f480;
+    border-radius:20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px #ffffff;      
+}   
+.bt1 i{
+    margin-left: 5px;
+    margin-right: 15px;
+    color: #F6FA70;
+    size: 100px;    
+}
+
+.bt2 i{
+    margin-left: 5px;
+    margin-right: 15px;
+    color: #c79d10d8;
+}
+/*Bubbles*/
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.bubbles{
+    position: relative;
+    display: flex;
+}
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+.bubbles span:nth-child(even)
+{
+    background:#ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+

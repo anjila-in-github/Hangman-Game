@@ -1,54 +1,47 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" >
 <head>
-    <title>Login_Page</title> 
-    <link rel="stylesheet" href="style.css"> 
-    <!--To access font awesome icon-->
+    <meta charset="UTF-8">
+    <title>Login_Page</title>  
+    <link rel='stylesheet' href= 'https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap'> 
     <script src="https://kit.fontawesome.com/935834ea02.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./login.css">
 </head>
 
 <body>
-    <div class="bg" >
-        <div class="login-box">
-            <h1>Login</h1>
-
-            <form>
-                <div class="input-group">
-                    <div class="input-field">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Enter your name">
-                    </div>                
-                </div> 
-
-                <a href="start.html"> 
-                <div class="btn">
-                    <button  class="js-tilt" type="button">
-                         LOGIN
-                    </button>    
-                </div>
-                </a>               
-            </form>     
-
+    <div class="contect">    
+        <div class="image">
+          <img class="js-tilt" src="login.png" alt="">
         </div>
-
-        <div class="content">
-            <div class="right">
-                <img class="js-tilt" src="1.png" alt="">
-            </div>
+        
+        <div class="content1">
+            <h1>The</h1>
         </div>
+          
+        <div class="content2">
+              <h1>Hangman</h1>
+        </div>    
+    </div>
+    
+    <div class="container">
+        <h2>Login</h2>
+        <input type="text" placeholder="Enter Your Name" id="username" />
+        <a href="start.html"> 
+          <button id="login">Login</button>
+        </a>    
+    </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
         <script type="text/javascript">
             $('.js-tilt').tilt({
                 glare: true,
                 maxGlare: .5,
                 scale: 1.1
-        })
+            })
         </script>
 
-    </div>
-</body>
+    <script  src="./login.js"></script>
 
+</body>
 </html>
