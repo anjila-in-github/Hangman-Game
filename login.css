@@ -1,13 +1,17 @@
 * {
     padding: 0;
     margin: 0;
+    border: 0;
     box-sizing: border-box;
     font-family: "Poppins";
     text-decoration: none;
   }
 
   body {
-    background-color: #0c192c;  
+    background-color: #0c192c; 
+    overflow-y: scroll;
+    overflow-x: hidden;   
+    Overflow-y:hidden;  
   }
 
   .content1{    
@@ -34,14 +38,14 @@
  
   .image{
     float:right;
-    transform: translate(-70%);     
+    transform: translate(-70%);         
   }
 
   .container {
     width: 31.25em;
     background-color: #f8f8f8;
     padding: 1.4em 3.75em;
-    position: absolute;
+    position:absolute;
     transform: translate(-50%, -50%);
     top: 60%;
     left: 40%;
