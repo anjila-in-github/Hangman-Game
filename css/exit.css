@@ -1,0 +1,137 @@
+/*Bubbles*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;  
+    font-family: Arial, Helvetica, sans-serif;  
+}
+body{
+    min-height:100vh;
+    background: #0c192c;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.bubbles{
+    position: relative;
+    display: flex;
+}
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+.bubbles span:nth-child(even){
+    background:#ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+/*Exit Box*/
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 150px;
+    padding: 20px;
+    background: #101010;
+    color: #fff;
+    text-align: center;
+    box-shadow:0 0 30px #ffffff;
+    overflow: hidden;
+    border-radius:20px;    
+}
+.box:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    transform: akevx(-3deg);
+}
+.box p{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+
+}
+.yes{   
+    display:flex;
+    justify-content:center;
+}
+.yes button{
+    font-size:12px;  
+    font-weight: bold;  
+    flex-basis: 10%;
+    position:absolute;   
+    top:60%;
+    left:20%;    
+    padding:1em;
+    border-radius: 0.6em; 
+    background:#000000;
+    color: #ffffff;   
+    cursor: pointer;       
+    border-color:#dfdfe1;
+}
+
+.no{   
+    display:flex;
+    justify-content:center;
+}
+.no button{
+    font-size:12px;  
+    font-weight: bold;  
+    flex-basis: 10%;
+    position:absolute;   
+    top:60%;
+    left:60%;    
+    padding:1em;
+    border-radius: 0.6em; 
+    background:#000000;
+    color: #ffffff;   
+    cursor: pointer;    
+}
+
+.yes button:hover{
+    color:#62ff00;
+    border-color: #62ff00;
+    box-shadow: insert 0 0 10px #62ff00;
+    box-shadow: 0 0 5px #62ff00,
+    0 0 25px #62ff00;
+}
+.no button:hover{
+    color:#ff0000;
+    border-color: #ff0000;
+    box-shadow: insert 0 0 10px #ff0000;
+    box-shadow: 0 0 5px #ff0000,
+    0 0 25px #ff0000;
+}
