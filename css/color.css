@@ -7,6 +7,10 @@
 }
 body{
     background-color:#0c192c;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    overflow-x: hidden;   
+    Overflow-y:hidden;
 }
 .container{
     font-size:20px;
