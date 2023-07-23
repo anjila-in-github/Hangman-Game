@@ -6,25 +6,35 @@
     <link rel="stylesheet" href="css/color.css" />
     <script src="https://kit.fontawesome.com/935834ea02.js" crossorigin="anonymous"></script>
 
-     <style>
-         .timer {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      width: 130px;
-      height: 120px;
-      border-radius: 50%;
-      background-color: #f2f2f2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-        
+    <style>
+      .timer {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #f1f1f1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        animation: timerAnimation 10s linear infinite;
+      }
+  
+      @keyframes timerAnimation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
     </style>
-</head>
+  </head>
+ 
 <body>  
     <div id="particles-js">
     
@@ -49,30 +59,17 @@
         <canvas id="canvas"></canvas>
         <div id="new-game-container" class="new-game-popup hide">
             <div id="result-text"></div>
-            <button id="new-game-button"> New Game </button>
+            <button id="new-game-button" onclick="resetTimer()">New Game </button>
         </div>
         <div class="timer" id="timer">10</div>
 
         <script>
-          // Function to start the timer
-          function startTimer() {
-            var timerElement = document.getElementById("timer");
-            var timeLeft = 10;
-      
-            var countdown = setInterval(function() {
-              timerElement.innerHTML = timeLeft;
-              timeLeft--;
-      
-              if (timeLeft < 0) {
-                clearInterval(countdown);
-                timerElement.innerHTML = "Game Over";
-              }
-            }, 1000);
+          function resetTimer() {
+            var timer = document.querySelector('.timer');
+            timer.style.animation = 'none';
+            timer.offsetHeight; /* Trigger reflow to restart the animation */
+            timer.style.animation = null;
           }
-      
-          // Call the startTimer function when the page loads
-          window.onload = startTimer;
-    
 <script type="text/javascript" src="particles.js"></script>    
 <script type="text/javascript" src="app.js"></script> 
 
