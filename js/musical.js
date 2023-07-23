@@ -15,7 +15,7 @@ let options={
         "Trumpet",
         "Drum",
         "Piano",
-        "Sexophone",
+        "Saxophone",
         "Violin",
         "Flute",
         "Sitar",

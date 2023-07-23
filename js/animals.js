@@ -16,7 +16,7 @@ let options={
         "Elephant",
         "Koala",
         "Monkey",
-        "Leopatd",
+        "Leopard",
         "Hippopotamus",
         "Panda",
         "Zebra",
