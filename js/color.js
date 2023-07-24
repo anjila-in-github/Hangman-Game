@@ -7,7 +7,7 @@ const newGameButton = document.getElementById("new-game-button");
 const canvas = document.getElementById("canvas");
 const resultText = document.getElementById("result-text");
 
-//Options value for button
+//Values 
 let options={
     Start:[
         "Orange",
@@ -23,13 +23,13 @@ let options={
     ],
 };
 
-//count
+//Count
 let winCount = 0;
 let count = 0;
 
 let  chosenWord = "";
 
-//Display option buttons
+//Display 
 const displayOptions = () => {
     optionsContainer.innerHTML += `<h3>Guess Me, If You</h3> <h1>DARE <i class="fa fa-skull"></i> !</h1>`;
     let buttonCon = document.createElement("div");
@@ -55,7 +55,8 @@ const blocker = () => {
     });
     newGameContainer.classList.remove("hide");
 };
-//thapeko for countdown
+
+//Code for Timer
 var timerElement = document.getElementById('timer');
 var timeLeft = 10;
 var countdownInterval;
@@ -84,7 +85,7 @@ function resetTimer() {
 
 //Word Generator
 const generateWord = (optionValue) => {
-    startTimer();//thapeko
+    startTimer();//
     let optionsButtons = document.querySelectorAll(".options");
     
     //If option value matches the button innerText then highlight the button
