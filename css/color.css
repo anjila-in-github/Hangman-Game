@@ -169,3 +169,19 @@ button:hover{
     height:100%;
     background:#060613;
 }
+.image{
+    top : 20px;
+    right:20px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.image img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 10px solid #25545d;
+}
