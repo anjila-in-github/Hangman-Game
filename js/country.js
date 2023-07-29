@@ -56,6 +56,33 @@ const blocker = () => {
     newGameContainer.classList.remove("hide");
 };
 
+//Code for Timer
+var timerElement = document.getElementById('timer');
+var timeLeft = 10;
+var countdownInterval;
+
+function startTimer() {
+    countdownInterval = setInterval(updateTimer, 1000);
+}
+
+function updateTimer() {
+    timeLeft--;
+    timerElement.textContent = timeLeft;
+
+    if (timeLeft === 0) {
+        clearInterval(countdownInterval);
+        timerElement.textContent = "Time's Up!";
+        resultText.innerHTML=`<h2 class='lose-msg'>You Died!!</h2><p>The word was <span>${chosenWord}</span></p>`;
+        blocker();
+    }
+}
+
+function resetTimer() {
+    clearInterval(countdownInterval);
+    timeLeft = 10;
+    timerElement.textContent = timeLeft;
+}
+
 //Word Generator
 const generateWord = (optionValue) => {
     let optionsButtons = document.querySelectorAll(".options");
