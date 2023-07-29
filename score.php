@@ -37,7 +37,7 @@ if(!$lnk)
     }
 
     function getScoresWithDifficulty($difficulty,$lnk){
-        $query="Select score from hangman where username=username'";
+        $query="Select score from hangman where username='$username'";
         $rs=mysqli_query($lnk,$query);
         
     $result=array();
