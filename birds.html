@@ -1,45 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap'>  
-    <link rel="stylesheet" href="css/birds.css" />
-    <script src="https://kit.fontawesome.com/935834ea02.js" crossorigin="anonymous"></script>
-</head>
-<body>  
-    <div id="particles-js">
-    
-    <a href="category.html">
-        <div class="btn">            
-            <button>
-                BACK
-            </button>    
-        </div>
-    </a>
-    <a href ="exit.html">
-    <div class="end">
-           <button>
-                End Game
-            </button>
-        </div>
-    </a>
-    <div class="container">
-        <div id="options-container"></div>
-        <div id="letter-container" class="letter-container hide"></div>
-        <div id="user-input-section"></div>
-        <canvas id="canvas"></canvas>
-        <div id="new-game-container" class="new-game-popup hide">
-            <div id="result-text"></div>
-            <button id="new-game-button"> New Game </button>
-        </div>
-    </div>
-    
-    </div>
-    
-<script type="text/javascript" src="particles.js"></script>    
-<script type="text/javascript" src="app.js"></script> 
 
-<script  src="js/birds.js"></script>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap'>
+  <link rel="stylesheet" href="css/color.css" />
+  <script src="https://kit.fontawesome.com/935834ea02.js" crossorigin="anonymous"></script>
+
+  <style>
+    .timer {
+      position: fixed;
+      top: 20px;
+      right: 22px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="particles-js">
+
+    <a href="category.html">
+      <div class="btn">
+        <button>
+          BACK
+        </button>
+      </div>
+    </a>
+    <a href="exit.html">
+      <div class="end">
+        <button>
+          End Game
+        </button>
+      </div>
+    </a>
+
+    <div class="container">
+      <div id="options-container"></div>
+      <div id="letter-container" class="letter-container hide"></div>
+      <div id="user-input-section"></div>
+      <canvas id="canvas"></canvas>
+      <div id="new-game-container" class="new-game-popup hide">
+        <div id="result-text"></div>
+        <button id="new-game-button" onclick="resetTimer()">New Game </button>
+      </div>
+      <div class="timer" id="timer">Timer</div>
+      <!--
+          <div class="image">
+            <img src="images/hint.jpg">
+          </div>-->
+    </div>
+
+    <script>
+      function resetTimer() {
+        var timer = document.querySelector('.timer');
+      }
+    </script>
+  </div>
+
+  <script type="text/javascript" src="particles.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+
+  <script src="js/birds.js"></script>
 
 </body>
+
 </html>
