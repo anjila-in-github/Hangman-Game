@@ -35,7 +35,7 @@ require 'connect.php';
   <title></title>
   <link rel='stylesheet' href= 'https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap'>  
   <script src="https://kit.fontawesome.com/935834ea02.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/reg&log.css">
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>    
   <div class="content1">
@@ -47,7 +47,7 @@ require 'connect.php';
   </div>
 
   <div class="login-box">
-    <h1>Sign up</h1>
+    <h1>Login</h1>
     <form class="" action="" method="post" autocomplete="off">
     <div class="input-group">
       <div class="user-box" >
@@ -62,33 +62,20 @@ require 'connect.php';
         <label>
           <i class="fas fa-lock"></i> Password                 
         </label>                         
-      </div>
-       
-      <p>Forgot Password <a href="#">Click Here!</a></p>
+      </div>    
     </div>
 
-    <div class="btn">  
-    <button> 
-    <a href="register.php">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-            Sign Up
-    </a>
-    </button>
-
-    <div class="space"></div>
-
-    <button type="submit" name="submit">        
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span> 
-            Sign In
-    </button>            
+    <div class="btn">   
+        <button type="submit" name="submit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Login Now
+        </button>       
     </div>
-      
+
+    <p>Don't have an account? <a href="register.php"> Register now!</a></p> 
     </form>
   </div>
 </body>
