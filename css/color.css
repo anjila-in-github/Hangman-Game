@@ -188,4 +188,41 @@ button:hover{
     border: 10px solid #25545d;
     
 }*/
+html,body{
+  background: #333;
+  font-family:'Oswald', sans-serif;
+  color: #CCC;
+  text-shadow: 1px 1px 5px black;
+}
+#center{
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translateY(-50%) translateX(-50%);
+}
+#score {
+  transform-style: preserve-3d;
+  font-size: 90px;
+  line-height: 90px;
+}
+#tag{
+  transform-style: preserve-3d;
+  display: none;
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size:50px;
+  line-height:50px;
+}
+#title{
+  transform-style: preserve-3d;
+  position:absolute;
+  top:-125px;
+  left:50%;
+  transform: translateX(-50%);
+  font-size:70px;
+  line-height:70px;
+}
 

@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `login_data` (
   `username` varchar(30) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  `score` int(30) NOT NULL
+  `password` varchar(20) NOT NULL,/*
+  `score` int(30) NOT NULL*/
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 COMMIT;
 
