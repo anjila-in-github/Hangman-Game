@@ -188,7 +188,10 @@ button:hover{
     border: 10px solid #25545d;
     
 }
+/*score*/
 .score{
+     top: 205px;
+    right: 210px;
     color:#741515;
     font-weight: bold;
     font-size: larger;
