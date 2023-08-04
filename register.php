@@ -31,7 +31,7 @@ require 'connect.php';
   <title></title>
   <link rel='stylesheet' href= 'https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap'>  
   <script src="https://kit.fontawesome.com/935834ea02.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/reg&log.css">
+  <link rel="stylesheet" href="css/register.css">
 </head>
 <body>    
   <div class="content1">
@@ -43,7 +43,7 @@ require 'connect.php';
   </div>
 
   <div class="login-box">
-    <h1>Sign up</h1>
+    <h1>Register</h1>
     <form class="" action="" method="post" autocomplete="off">
     <div class="input-group">
       <div class="user-box" >
@@ -74,22 +74,10 @@ require 'connect.php';
         <span></span>
         <span></span>
         <span></span>
-        Sign Up
-      </button>
-
-      <div class="space"></div>
-
-      <button>   
-      <a href="login.php">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span> 
-        Sign In
-      </a>
-      </button>            
+        Register Now
+      </button>       
     </div>
-      
+    <p>Already have an account?<a href="login.php"> Login now!</a></p> 
     </form>
   </div>
 </body>
