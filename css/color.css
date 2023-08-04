@@ -174,8 +174,8 @@ button:hover{
     position: fixed;
     top: 20px;
     right: 22px;
-    width: 270px;
-    height: 270px;
+    width: 250px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,45 +187,25 @@ button:hover{
     border-radius: 50%;
     border: 10px solid #25545d;
     
-<<<<<<< HEAD
-}*/
+}
 html,body{
-  background: #333;
   font-family:'Oswald', sans-serif;
-  color: #CCC;
-  text-shadow: 1px 1px 5px black;
+  color: #08b1b7;
+ 
 }
-#center{
-  transform-style: preserve-3d;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform:translateY(-50%) translateX(-50%);
-}
-#score {
-  transform-style: preserve-3d;
-  font-size: 90px;
-  line-height: 90px;
-}
-#tag{
-  transform-style: preserve-3d;
-  display: none;
-  position: absolute;
-  top: -55px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size:50px;
-  line-height:50px;
-}
-#title{
-  transform-style: preserve-3d;
-  position:absolute;
-  top:-125px;
-  left:50%;
-  transform: translateX(-50%);
-  font-size:70px;
-  line-height:70px;
-=======
->>>>>>> 983ccfc351406969210e5153c93f80f8f95f4c69
+.score{
+   
+  position: fixed;
+  top: 23px;
+  right: 25px;
+  width: 380px;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
 }
 

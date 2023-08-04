@@ -8,6 +8,21 @@
   <script src="https://kit.fontawesome.com/935834ea02.js" crossorigin="anonymous"></script>
 
   <style>
+        .timer {
+      position: fixed;
+      top: 20px;
+      right: 22px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: bold;
+      color: #333;
+    }
   </style>
 </head>
 
@@ -43,6 +58,11 @@
           <div class="image">
             <img src="images/hint.jpg">
           </div>
+          
+          <div class="score" id="score">Score:</div>
+            
+          </div>
+
     </div>
 
     <script>
@@ -51,24 +71,13 @@
       }
     </script>
   </div>
-
+ 
   <script type="text/javascript" src="particles.js"></script>
   <script type="text/javascript" src="app.js"></script>
 
   <script src="js/color.js"></script>
-  <input type="button" value="Give me some points!"
-  onClick="go(100);"/>
-  <div id="center">
-    <div id="title">
-      SCORE:
-    </div>
-    <div id="tag">
-      +100
-    </div>
-    <div id="score">
-      0
-    </div>
-  </div>
+  
+  
 
 </body>
 
