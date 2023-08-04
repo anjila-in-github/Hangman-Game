@@ -1,4 +1,4 @@
-//Initial References
+ //Initial References
 const letterContainer = document.getElementById("letter-container");
 const optionsContainer = document.getElementById("options-container");
 const userInputSection = document.getElementById("user-input-section");
@@ -7,7 +7,7 @@ const newGameButton = document.getElementById("new-game-button");
 const canvas = document.getElementById("canvas");
 const resultText = document.getElementById("result-text");
 
-//Options value for button
+//Values 
 let options={
     Start:[
         "Nepal",
@@ -23,13 +23,13 @@ let options={
     ],
 };
 
-//count
+//Count
 let winCount = 0;
 let count = 0;
 
 let  chosenWord = "";
 
-//Display option buttons
+//Display 
 const displayOptions = () => {
     optionsContainer.innerHTML += `<h3>Guess Me, If You</h3> <h1>DARE <i class="fa fa-skull"></i> !</h1>`;
     let buttonCon = document.createElement("div");
@@ -58,7 +58,7 @@ const blocker = () => {
 
 //Code for Timer
 var timerElement = document.getElementById('timer');
-var timeLeft = 10;
+var timeLeft = 20;
 var countdownInterval;
 
 function startTimer() {
@@ -79,12 +79,13 @@ function updateTimer() {
 
 function resetTimer() {
     clearInterval(countdownInterval);
-    timeLeft = 10;
+    timeLeft = 20;
     timerElement.textContent = timeLeft;
 }
 
 //Word Generator
 const generateWord = (optionValue) => {
+    startTimer();//
     let optionsButtons = document.querySelectorAll(".options");
     
     //If option value matches the button innerText then highlight the button
@@ -159,7 +160,9 @@ const initializer = () => {
             drawMan(count);
             //count==6 because head,body,left arm,right arm,left leg,right leg
             console.log(count);
-             if(count==6){
+             if(count==6){         
+                clearInterval(countdownInterval);
+                timerElement.textContent = "Time's Up!"; 
                 resultText.innerHTML=`<h2 class='lose-msg'>You Died!!</h2><p>The word was <span>${chosenWord}</span></p>`;
                     blocker();
                 }

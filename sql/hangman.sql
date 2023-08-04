@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 31, 2023 at 04:54 PM
+-- Host: localhost:3306
+-- Generation Time: Jul 29, 2023 at 09:58 AM
 -- Server version: 10.4.24-MariaDB
--- PHP Version: 8.0.19
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,9 +29,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `login_data` (
   `username` varchar(30) NOT NULL,
+<<<<<<< HEAD
   `password` varchar(20) NOT NULL,/*
   `score` int(30) NOT NULL*/
+=======
+  `pwd` varchar(20) NOT NULL
+>>>>>>> 983ccfc351406969210e5153c93f80f8f95f4c69
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `login_data`
+--
+
+INSERT INTO `login_data` (`username`, `pwd`) VALUES
+('1', '11');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
