@@ -188,24 +188,14 @@ button:hover{
     border: 10px solid #25545d;
     
 }
-html,body{
-  font-family:'Oswald', sans-serif;
-  color: #08b1b7;
- 
-}
 .score{
-   
-  position: fixed;
-  top: 23px;
-  right: 25px;
-  width: 380px;
-  height: 380px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
+    color:#741515;
+    font-weight: bold;
+    font-size: larger;
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
