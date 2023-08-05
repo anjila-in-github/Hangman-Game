@@ -1,4 +1,3 @@
-
 //Initial References
 const letterContainer = document.getElementById("letter-container");
 const optionsContainer = document.getElementById("options-container");
@@ -11,17 +10,16 @@ const resultText = document.getElementById("result-text");
 //Values 
 let options={
     Start:[
-        "Giraffe",
-        "Tiger",
-        "Camel",
-        "Elephant",
-        "Koala",
-        "Monkey",
-        "Leopard",
-        "Hippopotamus",
-        "Panda",
-        "Zebra",
-
+        "Sparrow",
+        "Crow",
+        "Dove",
+        "Parrot",
+        "Vulture",
+        "Eagle",
+        "Kingfisher",
+        "Ostrich",
+        "Turkey",
+        "Flamingo",
     ],
 };
 
@@ -60,7 +58,7 @@ const blocker = () => {
 
 //Code for Timer
 var timerElement = document.getElementById('timer');
-var timeLeft = 20;
+var timeLeft = 25;
 var countdownInterval;
 
 function startTimer() {
@@ -79,15 +77,20 @@ function updateTimer() {
     }
 }
 
+//Stoping Timer
+function myStopFunction() {
+    clearInterval(countdownInterval);
+}
+
 function resetTimer() {
     clearInterval(countdownInterval);
-    timeLeft = 20;
+    timeLeft = 25;
     timerElement.textContent = timeLeft;
 }
 
 //Word Generator
 const generateWord = (optionValue) => {
-    startTimer();//
+    startTimer();
     let optionsButtons = document.querySelectorAll(".options");
     
     //If option value matches the button innerText then highlight the button
@@ -147,26 +150,30 @@ const initializer = () => {
                         dashes[index].innerText = char;
                         //increment counter
                         winCount += 1;
+                        
                         //if wincount equals to word length
                         if(winCount==charArray.length){
+                            myStopFunction();
                             resultText.innerHTML=`<h2 class='win-msg'>You Won!!</h2><p>The word was <span>${chosenWord}</span></p>`;
-                             // Assuming you have a variable called 'winCount' and 'wordLength' that holds the win count and word length respectively
-
-                             var scoreElement = document.getElementById("score");
-                             var currentScore = parseInt(scoreElement.innerText);
-                             var newScore = currentScore + 20;
-                             scoreElement.innerText = newScore;
-
-            var levelBox = document.getElementById('level');
-            levelBox.textContent = winCount === charArray.length ? parseInt(levelBox.textContent) + 1 : levelBox.textContent;
+                            
+                            var scoreElement = document.getElementById("score");
+                            var currentScore = parseInt(scoreElement.innerText);
+                            var newScore = currentScore + 20;
+                            scoreElement.innerText = newScore;
         
-            
-        // Call the updateLevelBox function whenever the win count changes
-        // For example, you can call it inside a function that handles the win condition
-        // updateLevelBox();
+                            // Assuming you have a variable called 'winCount' and 'wordLength' that holds the win count and word length respectively    
+                            var levelBox = document.getElementById('level');
+                            levelBox.textContent = winCount === charArray.length ? parseInt(levelBox.textContent) + 1 : levelBox.textContent;
+                            
+                            // Call the updateLevelBox function whenever the win count changes
+                            // For example, you can call it inside a function that handles the win condition
+                            // updateLevelBox();
+
+                            // Assuming you have already defined the winCount and wordLength variables
+  
                             //block all buttons
                             blocker();
-                        }
+                        }                        
                     }
                 });
             }else{
