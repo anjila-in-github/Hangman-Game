@@ -10,16 +10,16 @@ const resultText = document.getElementById("result-text");
 //Values 
 let options={
     Start:[
-        "Sparrow",
-        "Crow",
-        "Dove",
-        "Parrot",
-        "Vulture",
-        "Eagle",
-        "Kingfisher",
-        "Ostrich",
-        "Turkey",
-        "Flamingo",
+        "Sweater",
+        "Gown",
+        "Jacket",
+        "Jumper",
+        "Hoodie",
+        "Pants",
+        "frock",
+        "Coat",
+        "Jeans",
+        "Skirt",
     ],
 };
 

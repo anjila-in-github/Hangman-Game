@@ -10,16 +10,16 @@ const resultText = document.getElementById("result-text");
 //Values 
 let options={
     Start:[
-        "Sparrow",
-        "Crow",
-        "Dove",
-        "Parrot",
-        "Vulture",
-        "Eagle",
-        "Kingfisher",
-        "Ostrich",
+        "Nepal",
+        "Italy",
+        "France",
+        "Germany",
+        "Vitenam",
+        "Spain",
+        "Iran",
+        "Greece",
+        "Russia",
         "Turkey",
-        "Flamingo",
     ],
 };
 

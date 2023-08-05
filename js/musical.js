@@ -10,16 +10,16 @@ const resultText = document.getElementById("result-text");
 //Values 
 let options={
     Start:[
-        "Sparrow",
-        "Crow",
-        "Dove",
-        "Parrot",
-        "Vulture",
-        "Eagle",
-        "Kingfisher",
-        "Ostrich",
-        "Turkey",
-        "Flamingo",
+        "Guitar",
+        "Keyboard",
+        "Trumpet",
+        "Drum",
+        "Piano",
+        "Saxophone",
+        "Violin",
+        "Flute",
+        "Sitar",
+        "Banjo",
     ],
 };
 
