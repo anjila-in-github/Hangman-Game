@@ -77,6 +77,11 @@ function updateTimer() {
     }
 }
 
+//Stoping Timer
+function myStopFunction() {
+    clearInterval(countdownInterval);
+}
+
 function resetTimer() {
     clearInterval(countdownInterval);
     timeLeft = 20;
@@ -85,7 +90,7 @@ function resetTimer() {
 
 //Word Generator
 const generateWord = (optionValue) => {
-    startTimer();//
+    startTimer();
     let optionsButtons = document.querySelectorAll(".options");
     
     //If option value matches the button innerText then highlight the button
@@ -145,18 +150,20 @@ const initializer = () => {
                         dashes[index].innerText = char;
                         //increment counter
                         winCount += 1;
+
                         //if wincount equals to word length
                         if(winCount==charArray.length){
+                            myStopFunction();
                             resultText.innerHTML=`<h2 class='win-msg'>You Won!!</h2><p>The word was <span>${chosenWord}</span></p>`;
-                             // Assuming you have a variable called 'winCount' and 'wordLength' that holds the win count and word length respectively
+                            
+                             // Assuming you have a variable called 'winCount' and 'wordLength' that holds the win count and word length respectively    
+                             var levelBox = document.getElementById('level');
+                             levelBox.textContent = winCount === charArray.length ? parseInt(levelBox.textContent) + 1 : levelBox.textContent;
+                             
+                             // Call the updateLevelBox function whenever the win count changes
+                             // For example, you can call it inside a function that handles the win condition
+                             // updateLevelBox();
 
-    
-            var levelBox = document.getElementById('level');
-            levelBox.textContent = winCount === charArray.length ? parseInt(levelBox.textContent) + 1 : levelBox.textContent;
-        
-        // Call the updateLevelBox function whenever the win count changes
-        // For example, you can call it inside a function that handles the win condition
-        // updateLevelBox();
                             //block all buttons
                             blocker();
                         }
@@ -275,10 +282,10 @@ const drawMan =(count) => {
 
 //New Game
 newGameButton.addEventListener("click",initializer);
-   window.onload = initializer;
+   window.onload = initializer;/*
    score = 0;
 
-   function go(x){
+function go(x){
      $({score: 0}).animate({score: x},{
        duration:1000,
        easing:"linear",
@@ -305,5 +312,5 @@ newGameButton.addEventListener("click",initializer);
    }
  });
  
-   }
+}*/
  
