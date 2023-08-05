@@ -164,9 +164,13 @@ const initializer = () => {
                 clearInterval(countdownInterval);
                 timerElement.textContent = "Time's Up!"; 
                 resultText.innerHTML=`<h2 class='lose-msg'>You Died!!</h2><p>The word was <span>${chosenWord}</span></p>`;
-               // Assuming you have a variable called 'winCount' and 'wordLength' that holds the win count and word length respectively
 
-    
+                var scoreElement = document.getElementById("score");
+                var currentScore = parseInt(scoreElement.innerText);
+                var newScore = currentScore + 20;
+                scoreElement.innerText = newScore;
+            
+               // Assuming you have a variable called 'winCount' and 'wordLength' that holds the win count and word length respectively
                var levelBox = document.getElementById('level');
                levelBox.textContent = winCount === charArray.length ? parseInt(levelBox.textContent) + 1 : levelBox.textContent;
            
