@@ -227,23 +227,22 @@ button:hover{
     justify-content: center;
     font-size: 25px;
     font-weight: bold;
-    color: #000000;
+    color: #511574;
 }
 /*level box*/
 .level-box {
-    position: absolute;
-    top: 40px;
+   position: absolute;
+    top: 60px;
     left: 20%;
     transform: translateX(-80%);
     width: 100px;
     height: 50px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 1px;
+    background-color: #d8d3d3;
+    border: 2px solid #ccc;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Arial;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
 }

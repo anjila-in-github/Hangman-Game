@@ -58,7 +58,7 @@ const blocker = () => {
 
 //Code for Timer
 var timerElement = document.getElementById('timer');
-var timeLeft = 20;
+var timeLeft = 25;
 var countdownInterval;
 
 function startTimer() {
@@ -84,7 +84,7 @@ function myStopFunction() {
 
 function resetTimer() {
     clearInterval(countdownInterval);
-    timeLeft = 20;
+    timeLeft = 25;
     timerElement.textContent = timeLeft;
 }
 
