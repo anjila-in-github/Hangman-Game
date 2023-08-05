@@ -172,12 +172,11 @@ button:hover{
 /*hint*/
 .image{   
     position: fixed;
-    top: 20px;
-    right: 22px;
+    top: 40px;
+    right: -135px;
     width: 250px;
     height: 250px;
     display: flex;
-    justify-content: center;
     align-items: center;
     cursor: pointer;
 }
@@ -190,15 +189,13 @@ button:hover{
 }
 /*score*/
 .score{
-     top: 205px;
-    right: 210px;
+    top: 80px;
+    right:550px;
     color:#741515;
     font-weight: bold;
     font-size: larger;
     position:fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;  
 }
-
