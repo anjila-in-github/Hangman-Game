@@ -23,6 +23,23 @@
       font-weight: bold;
       color: #333;
     }
+    .level-box {
+      position: absolute;
+      top: 40px;
+      left: 20%;
+      transform: translateX(-80%);
+      width: 100px;
+      height: 50px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial;
+      font-size: 15px;
+      font-weight: bold;
+    }
   </style>
 </head>
 
@@ -54,6 +71,8 @@
         <button id="new-game-button" onclick="resetTimer()">New Game </button>
       </div>
       <div class="timer" id="timer">Timer</div>
+      <div class="level-box">
+        Level: <span id="level">1</span>/10
       <!--
           <div class="image">
             <img src="images/hint.jpg">
