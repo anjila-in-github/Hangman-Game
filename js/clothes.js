@@ -16,7 +16,7 @@ let options={
         "Jumper",
         "Hoodie",
         "Pants",
-        "frock",
+        "Frock",
         "Coat",
         "Jeans",
         "Skirt",

@@ -18,8 +18,8 @@ let options={
         "Dentist",
         "Postman",
         "Pilot",
-        "Photograph",
-        "Pinter",
+        "Photographer",
+        "Painter",
     ],
 };
 

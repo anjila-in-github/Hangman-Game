@@ -18,7 +18,7 @@ let options={
         "Orange",
         "Pineapple",
         "Pear",
-        "peach",
+        "Peach",
         "Watermelon",
     ],
 };
