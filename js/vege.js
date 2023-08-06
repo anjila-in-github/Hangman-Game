@@ -20,7 +20,7 @@ let options={
         "Broccoli",
         "Corn",
         "Pumpkin",
-    ],
+    ], 
 };
 
 //Count
