@@ -12,7 +12,7 @@ require 'connect.php';
       {
         $_SESSION["login"]=true;
         $_SESSION["id"]=$row["id"];
-        header("Location:start.html");
+        header("Location:html/start.html");
       }
       else
       {
