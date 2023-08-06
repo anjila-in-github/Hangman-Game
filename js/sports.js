@@ -17,7 +17,7 @@ let options={
         "Tennis",
         "Hockey",
         "Cricket",
-        "Sufring",
+        "Surfing",
         "Judo",
         "Swimming",
     ],

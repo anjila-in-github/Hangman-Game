@@ -14,7 +14,7 @@ let options={
         "Italy",
         "France",
         "Germany",
-        "Vitenam",
+        "Vietnam",
         "Spain",
         "Iran",
         "Greece",
