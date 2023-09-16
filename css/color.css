@@ -33,7 +33,7 @@ body{
 }
 #options-container h1{
     font-weight: bolder;
-    color: #b41111;
+    color: #000000;
 }
 #options-container div {
     width:100%;
@@ -194,13 +194,13 @@ button:hover{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #f1f1f1;
+    background-color: #fb0b0b;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 15px;
     font-weight: bold;
-    color: #333;
+    color: #dcf311;
 }
 /*score*/
 .score{
