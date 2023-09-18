@@ -34,7 +34,7 @@ const displayOptions = () => {
     optionsContainer.innerHTML += `<h3>Guess <h2>Clothes</h2><h3>, If You DARE <i class="fa fa-skull"></i> !</h3></h3>`;
     let buttonCon = document.createElement("div");
     for(let value in options){
-        buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
+        buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')"><i class="fas fa-play"></i>${value}</button>`;
     }
     optionsContainer.appendChild(buttonCon);
 };

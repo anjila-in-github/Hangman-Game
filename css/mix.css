@@ -53,7 +53,7 @@ body{
 
 #options-container button:disabled{
     border:5px solid  #2b5088;
-    color: #000000;
+    color: #000000ba;
     background-color: #d1cec7;
 }
 .letter-container{
@@ -70,7 +70,7 @@ body{
     border-color: #39d78d;
     background-color:#ffffff;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
 }
 .new-game-popup{
     background-color:#ffffff;
