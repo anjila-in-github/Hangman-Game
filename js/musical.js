@@ -31,7 +31,7 @@ let  chosenWord = "";
 
 //Display 
 const displayOptions = () => {
-    optionsContainer.innerHTML += `<h3>Guess Me, If You</h3> <h1>DARE <i class="fa fa-skull"></i> !</h1>`;
+    optionsContainer.innerHTML += `<h3>Guess <h2>Musical Instruments</h2><h3>, If You DARE <i class="fa fa-skull"></i> !</h3></h3>`;
     let buttonCon = document.createElement("div");
     for(let value in options){
         buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
@@ -58,7 +58,7 @@ const blocker = () => {
 
 //Code for Timer
 var timerElement = document.getElementById('timer');
-var timeLeft = 59;
+var timeLeft = 60;
 var countdownInterval;
 
 function startTimer() {
@@ -84,7 +84,7 @@ function myStopFunction() {
 
 function resetTimer() {
     clearInterval(countdownInterval);
-    timeLeft = 59;
+    timeLeft = 60;
     timerElement.textContent = timeLeft;
 }
 

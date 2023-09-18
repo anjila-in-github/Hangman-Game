@@ -29,19 +29,28 @@
       <div id="letter-container" class="letter-container hide"></div>
       <div id="user-input-section"></div>
       <canvas id="canvas"></canvas>
+
       <div id="new-game-container" class="new-game-popup hide">
         <div id="result-text"></div>
-        <button id="new-game-button" onclick="resetTimer()">New Game </button>
+        <button id="new-game-button" onclick="resetTimer()">
+          <i class="fa-solid fa-face-smile-beam fa"></i>
+          New Game 
+        </button><br>
+
+        <a href="exit.html"><button id="end" >
+          <i class="fa-solid fa-face-sad-tear fa"></i>
+          End Game </button>
+        </a>
       </div>
 
-      <div class="timer" id="timer">Timer</div>
+      <div class="timer" id="timer">You're time <br>starts now</div>
 
-      <!--<div class="image">
-        <img src="images/hint.jpg">
-      </div>-->
+      <div class="image">
+        <img src="../images/hint.jpg">
+      </div>
 
       <div class="score" >
-        Score: <div class="score1" id="score">0</div>
+        Score:<div class="score1" id="score">0</div>
       </div>
       
       <div class="level-box">
