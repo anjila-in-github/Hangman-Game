@@ -64,8 +64,8 @@ body{
     gap:0.6em;
 }
 #letter-container button{
-    height:2.6em;
-    width:2.6em;
+    height:2.0em;
+    width:2.0em;
     border-radius:0.3em;
     border-color: #39d78d;
     background-color:#ffffff;
@@ -91,6 +91,10 @@ body{
     font-size: 1.8em;
     margin:0.6em 0 1.2em 0;
 }
+#lives{
+    text-align: center;
+    color: #ff0808;
+}
 canvas{
     display:flex;
     margin: auto;
@@ -110,16 +114,34 @@ canvas{
 #result-text span{
     font-weight:600;
 }
+#new-game-button{        
+  height:70px;
+  border-radius:  0.2em;
+  font-weight: bold;
+  background: #76746f;
+  color: #fff;
+  border:4px solid#2b5088;
+  cursor: pointer;
+  font-size:20px;
+}
+#new-game-button:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+  border: solid 1px #fff;
+  color: #000000;
+}
 
-#new-game-button{
-    height:70px;
-    font-size: 20px;
-    background-color: #76746f;
-    border:4px solid#2b5088;
-    color: #ffffff;
-    font-weight: bold;
-    border-radius: 0.2em;
-    cursor: pointer;   
+@media (max-width: 767px) {
+  #alphabet {
+    padding: 0 0 0 15px;
+  }
+}
+@media (max-width: 480px) {
+  #alphabet {
+    padding: 0 0 0 25px;
+  }
 }
 #new-game-button i{
     margin-left: 5px;
@@ -127,16 +149,36 @@ canvas{
     color: #F6FA70;
     size: 100px; 
 }
-#end{
+
+#end{        
     height:70px;
-    font-size: 20px;
-    background-color: #76746f;
-    border:4px solid#2b5088;
-    color: #ffffff;
+    border-radius:  0.2em;
     font-weight: bold;
-    border-radius: 0.2em;
-    cursor: pointer; 
-}
+    background: #76746f;
+    color: #fff;
+    border:4px solid#2b5088;
+    cursor: pointer;
+    font-size:20px;
+  }
+  #end:hover {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+    border: solid 1px #fff;
+    color: #000000;
+  }
+  
+  @media (max-width: 767px) {
+    #alphabet {
+      padding: 0 0 0 15px;
+    }
+  }
+  @media (max-width: 480px) {
+    #alphabet {
+      padding: 0 0 0 25px;
+    }
+  }
 #end i{
     margin-left: 5px;
     margin-right: 15px;
@@ -155,6 +197,7 @@ button {
 .lose-msg{
     color:#fe5152;
 }
+
 .btn{ 
     display:flex;
     justify-content:center;
@@ -164,7 +207,7 @@ button {
     font-weight: bold;  
     flex-basis: 10%;
     position:absolute;   
-    top:86%;
+    top:90%;
     left:40%;    
     padding:1em;
     border-radius: 0.6em; 
@@ -182,7 +225,7 @@ button {
     font-weight: bold;  
     flex-basis: 10%;
     position:absolute;   
-    top:86%;
+    top:90%;
     left:60%;    
     padding:1em;
     border-radius: 0.6em; 
@@ -197,26 +240,38 @@ button:hover{
     0 0 25px cyan, 0 0 50px cyan,
     0 0 100px cyan, 0 0 200px cyan;
 }
-#particles-js{
+/* #particles-js{
     height:100%;
     background:#060613;
-}
-/*hint*/
-.image{   
+} */
+
+/* Hint */
+#hint{   
     position: fixed;
-    top: 45px;
-    right: -135px;
+    top: 140px;
+    left:560px;
     width: 250px;
     height: 250px;
     display: flex;
     align-items: center;
     cursor: pointer;    
-}
-.image img{
     height: 90px;
     width: 90px;
     border-radius: 50%;
 }
+#hint img{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+#clue{
+    font-size:15px;
+    font-weight: bold;
+    position: fixed;
+    top:33%;
+    left:70%;    
+  }
+
 /*timer*/
 .timer {
     position: fixed;
