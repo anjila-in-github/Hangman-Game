@@ -150,7 +150,7 @@ const generateWord = (optionValue) => {
 
     var hints = [
         "Pair of spongy,pinkish-gray organ in chest",
-        "Most imoortant and complex organ in human body",
+        "Most important and complex organ in human body",
         "Beats continuously to pump the blood",
         "Connected to the bones by tendons",
         "Largest solid organ ",
