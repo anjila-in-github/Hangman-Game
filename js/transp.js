@@ -128,16 +128,15 @@ const generateWord = (optionValue) => {
     var showClue = document.getElementById("clue");
 
     var hints = [
-        "Animal with spots",
-        "Animal with stripes",
-        "Can store water",
-        "Biggest mammal on land",
-        "Has pouch to carry baby",
-        "Can climb a tree",
-        "Belongs to cat family",
-        "Belongs to cat family",
-        "Eat bamboos",
-        "Animal with stripes"
+        "Heavy road vehicle used to carrying loads",
+        "Vehicle cosists of two wheels",
+        "A medically equipped vehicle",
+        "Type of Air craft",
+        "Type of road vehicle used for transpoting people or goods",
+        "Synonym for the word 'truck'",
+        "An underground railway",
+        "Vehicle used on fram or worksite",
+        "A series of connected vehicle that run along a railway track"
     ];
     getHint.onclick = function () {
         //  showClue.textContent=i;

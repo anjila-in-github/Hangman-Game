@@ -149,16 +149,36 @@ const generateWord = (optionValue) => {
     var showClue = document.getElementById("clue");
 
     var hints = [
-        "Animal with spots",
-        "Animal with stripes",
-        "Can store water",
-        "Biggest mammal on land",
-        "Has pouch to carry baby",
-        "Can climb a tree",
-        "Belongs to cat family",
-        "Belongs to cat family",
-        "Eat bamboos",
-        "Animal with stripes"
+        "Pair of spongy,pinkish-gray organ in chest",
+        "Most imoortant and complex organ in human body",
+        "Beats continuously to pump the blood",
+        "Connected to the bones by tendons",
+        "Largest solid organ ",
+        "J-shaped organ",
+        "Two Bean-shaped organ",
+        "Blood vessels that carry blood",
+        "Long,flat gland lies in abdomen",
+        "Internal framework of body",
+        "Mix of yellow and red color",
+        "Similar in apperence to voilent light",
+        "Darker shade of orange",
+        "Netural or achromatic color",
+        "Brownish crimson color",
+        "Reddish-purplish color",
+        "Light shade of violent or purple",
+        "Metallic Gray",
+        "Mix of Pink-orange color",
+        "Vivid blue-purple color",
+        "Landlocked country in SouthAsia",
+        "Located in the middle of Mediterranean Sea",
+        "Capital city Paris",
+        "Celebrate an iconic festival like Christmas market",
+        "Currency:Vietnamese dong",
+        "Continent:Europe,Africa",
+        "Capital:Tehran",
+        "Country in south eastern Europe",
+        "Largest country in the world by area",
+        "Brounded by Black,Mediterranean and Aegean sea"
     ];
     getHint.onclick = function () {
         //  showClue.textContent=i;

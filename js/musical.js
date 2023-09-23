@@ -129,16 +129,16 @@ const generateWord = (optionValue) => {
     var showClue = document.getElementById("clue");
 
     var hints = [
-        "Animal with spots",
-        "Animal with stripes",
-        "Can store water",
-        "Biggest mammal on land",
-        "Has pouch to carry baby",
-        "Can climb a tree",
-        "Belongs to cat family",
-        "Belongs to cat family",
-        "Eat bamboos",
-        "Animal with stripes"
+       "A stringed instrument",
+       "A row of levers that are pressed with the fingers",
+        "Brass wind musical instrument sounded by lip vibrations",
+        "Played by hitting rhythmically with a stick or hand",
+        "Produce sound when pressed keys",
+        "Three main parts:body neck and mouthpiece",
+        "Traditionally used as an accompaniment to singing and dancing",
+        "Consists a long tube with holes in it",
+        "Used in Hindustani classical music",
+        "Musical instrument of guitar family"
     ];
     getHint.onclick = function () {
         //  showClue.textContent=i;

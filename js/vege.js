@@ -129,16 +129,16 @@ const generateWord = (optionValue) => {
     var showClue = document.getElementById("clue");
 
     var hints = [
-        "Animal with spots",
-        "Animal with stripes",
-        "Can store water",
-        "Biggest mammal on land",
-        "Has pouch to carry baby",
-        "Can climb a tree",
-        "Belongs to cat family",
-        "Belongs to cat family",
-        "Eat bamboos",
-        "Animal with stripes"
+        "Annual plant in the nightshade family",
+        "Modified form of cabbage",
+        "Vegetable that consist of 95% water",
+        "The green seed pod",
+        "Root vegetable typically orange in color",
+        "Group of root vegetable and almost spicy taste",
+        "Leafy,green vegetable",
+        "Vegetable similar to cauliflower",
+        "Starchy vegetable",
+        "Plump, nutritious orange vegetable"
     ];
     getHint.onclick = function () {
         //  showClue.textContent=i;
