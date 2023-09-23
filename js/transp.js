@@ -132,11 +132,11 @@ const generateWord = (optionValue) => {
         "Vehicle cosists of two wheels",
         "A medically equipped vehicle",
         "Type of Air craft",
-        "Type of road vehicle used for transpoting people or goods",
+        "Type of road vehicle",
         "Synonym for the word 'truck'",
         "An underground railway",
-        "Vehicle used on fram or worksite",
-        "A series of connected vehicle that run along a railway track"
+        "Vehicle used on farm or worksite",
+        "A vehicle that run on a railway track"
     ];
     getHint.onclick = function () {
         //  showClue.textContent=i;
