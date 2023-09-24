@@ -1,107 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap'>
     <script src="https://kit.fontawesome.com/935834ea02.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/category.css">
 </head>
-<body>      
-<div class="container">
-    <h1 class="heading"><i class="fa-solid fa-gamepad fa-1x"></i> Select Category</h1>
-    <a href ="exit.html">
-        <div class="end">
-               <button>
+<body>
+    <audio src="../audio/Welcome.mp3"></audio>
+    <button id="button">
+        <i class="fas fa-volume-up"></i> CLICK ME
+    </button>
+    <div class="container">
+        <h1 class="heading"><i class="fa-solid fa-gamepad fa-1x"></i> Select Category</h1>
+        <a href="exit.html">
+            <div class="end">
+                <button>
                     End Game
                 </button>
             </div>
         </a>
-    <div class="box-container">        
-       
+        <div class="box-container">
+            <div class="box">
+                <img src="../images/22.jpg" alt="">
+                <a href="occupations.html" class="btn">
+                    <i class="fa fa-play"></i>
+                    Occupations
+                </a>
+            </div>
 
-        <div class="box">
-            <img src="../images/22.jpg" alt="">
-            <a href="occupations.html" class="btn">
-                <i class="fa fa-play"></i>
-                Occupations
-            </a>
+            <div class="box">
+                <img src="../images/33.jpg" alt="">
+                <a href="animals.html" class="btn">
+                    <i class="fa fa-play"></i>
+                    Animals
+                </a>
+            </div>
+
+            <div class="box">
+                <img src="../images/44.jpg" alt="">
+                <a href="clothes.html" class="btn">
+                    <i class="fa fa-play"></i>
+                    Clothes
+                </a>
+            </div>
+
+            <div class="box">
+                <img src="../images/55.jpg" alt="">
+                <a href="transp.html" class="btn">
+                    <i class="fa fa-play"></i>
+                    Transportations
+                </a>
+            </div>
+
+            <div class="box">
+                <img src="../images/66.jpg" alt="">
+                <a href="vege.html" class="btn">
+                    <i class="fa fa-play"></i>
+                    Vegetables
+                </a>
+            </div>
+
+            <div class="box">
+                <img src="../images/77.jpg" alt="">
+                <a href="mix.html" class="btn">
+                    <i class="fa fa-play"></i>
+                    Mixed Category
+                </a>
+            </div>
+
+            <div class="box">
+                <img src="../images/88.jpg" alt="">
+                <a href="sports.html" class="btn">
+                    <i class="fa fa-play"></i>
+                    Sports
+                </a>
+            </div>
+
+            <div class="box">
+                <img src="../images/99.jpg" alt="">
+                <a href="birds.html" class="btn">
+                    <i class="fa fa-play"></i>
+                    Birds
+                </a>
+            </div>
+
+
+            <div class="box">
+                <img src="../images/1111.jpg" alt="">
+                <a href="fruits.html" class="btn">
+                    <i class="fa fa-play"></i>
+                    Fruits
+                </a>
+            </div>
+
+            <div class="box">
+                <img src="../images/1212.jpg" alt="">
+                <a href="musical.html" class="btn">
+                    <i class="fa fa-play"></i>
+                    Musical Instruments
+                </a>
+            </div>
         </div>
+    </div>
+   
+    <script>
+        const button = document.querySelector("#button");
+        const icon = document.querySelector("#button > i");
+        const audio = document.querySelector("audio");
 
-        <div class="box">            
-            <img src="../images/33.jpg" alt="">
-            <a href="animals.html" class="btn">
-                <i class="fa fa-play"></i>
-                Animals
-            </a>
-        </div>
+        button.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.volume = 0.2;
+                audio.play();
+                icon.classList.remove('fa-volume-up');
+                icon.classList.add('fa-volume-mute');
 
-        <div class="box">           
-            <img src="../images/44.jpg" alt="">
-            <a href="clothes.html" class="btn">
-                <i class="fa fa-play"></i>
-                Clothes
-            </a>
-        </div>
+            } else {
+                audio.pause();
+                icon.classList.remove('fa-volume-mute');
+                icon.classList.add('fa-volume-up');
+            }
+            button.classList.add("fade");
+        });
 
-        <div class="box">
-            <img src="../images/55.jpg" alt="">
-            <a href="transp.html" class="btn">
-                <i class="fa fa-play"></i>
-                Transportations
-            </a>
-        </div>
-
-        <div class="box">
-            <img src="../images/66.jpg" alt="">
-            <a href="vege.html" class="btn">
-                <i class="fa fa-play"></i>
-                Vegetables
-            </a>
-        </div>
-
-        <div class="box">
-            <img src="../images/mix.jpg" alt="">
-            <a href="mix.html" class="btn">
-                <i class="fa fa-play"></i>
-                 Mixed Category
-            </a>
-        </div>
-
-        <div class="box">
-            <img src="../images/88.jpg" alt="">
-            <a href="sports.html" class="btn">
-                <i class="fa fa-play"></i>
-                Sports
-            </a>
-        </div>
-
-        <div class="box">
-            <img src="../images/99.jpg" alt="">
-            <a href="birds.html" class="btn">
-                <i class="fa fa-play"></i>
-                Birds
-            </a>
-        </div>
-
-
-        <div class="box">
-            <img src="../images/1111.jpg" alt="">
-            <a href="fruits.html" class="btn">
-                <i class="fa fa-play"></i>
-                Fruits
-            </a>
-        </div>
-
-        <div class="box">
-            <img src="../images/1212.jpg" alt="">
-            <a href="musical.html" class="btn">
-                <i class="fa fa-play"></i>
-                Musical Instruments
-            </a>
-        </div>
-    </div>    
-</div>
+    </script>
 </body>
 </html>

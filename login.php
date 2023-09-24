@@ -46,6 +46,8 @@ require 'connect.php';
     <h1>Hangman</h1>
   </div>
 
+  <img class="js-tilt" src="images/login.png" alt="">
+
   <div class="login-box">
     <h1>Login</h1>
     <form class="" action="" method="post" autocomplete="off">
@@ -66,7 +68,7 @@ require 'connect.php';
     </div>
 
     <div class="btn">   
-        <button type="submit" name="submit">
+        <button type="submit" name="submit" onclick="document.getElementById('audio').play()">
           <span></span>
           <span></span>
           <span></span>
@@ -74,9 +76,20 @@ require 'connect.php';
           Login Now
         </button>       
     </div>
-
     <p>Don't have an account? <a href="register.php"> Register now!</a></p> 
-    </form>
+
+    </form>    
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <script type="text/javascript">
+        $('.js-tilt').tilt({
+            glare: true,
+            maxGlare: .5,
+            scale: 1.1
+        })
+    </script>
+    
 </body>
 </html>

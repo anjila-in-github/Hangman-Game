@@ -92,3 +92,35 @@ button:hover{
     0 0 25px cyan, 0 0 50px cyan,
     0 0 100px cyan, 0 0 200px cyan;
 }
+
+/* Audio */
+   audio {
+        display: none;
+    }
+    button {
+        font-size: 16px;
+        color: #eee;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        padding: 15px;
+        border: none;
+        border-radius: 2px;
+        outline: none;
+        background: rgba(115, 67, 167, 0.8);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        opacity: 0.8;
+        cursor: pointer;
+        transition: all 0.4s ease-out;
+    }
+    button.fade:hover {
+        opacity: 0.8;
+    }
+    .fade {
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap'>
   <script src="https://kit.fontawesome.com/935834ea02.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../css/animals.css" /> 
+  <link rel="stylesheet" href="../css/animals.css" />
 </head>
-<body>    
+
+<body>
   <a href="category.html">
     <div class="btn">
       <button>
@@ -22,7 +24,7 @@
     </div>
   </a>
 
-  <div class="container">
+<div class="container">
     <div id="options-container"></div>
     <div id="letter-container" class="letter-container hide"></div>
     <div id="user-input-section"></div>
@@ -35,30 +37,37 @@
       <div id="result-text"></div>
       <button id="new-game-button" onclick="resetTimer();clearhint()">
         <i class="fa-solid fa-face-smile-beam fa"></i>
-        New Game 
+        New Game
       </button><br>
 
-      <a href="exit.html"><button id="end" >
-        <i class="fa-solid fa-face-sad-tear fa"></i>
-        End Game </button>
+      <a href="exit.html"><button id="end">
+          <i class="fa-solid fa-face-sad-tear fa"></i>
+          End Game </button>
       </a>
     </div>
 
+    <!-- Timer -->
     <div class="timer" id="timer">You're time <br>starts now</div>
-    
-      <!--For Hint-->
-      <button id="hint"></button>
-      <p id="clue"></p> 
-     
-      <div class="level-box">
-        Level: <span id="level">1</span>/10     
-      </div>
 
-      <div class="score" >
-        Score:<div class="score1" id="score">0</div>
-      </div>  
+    <!--For Hint-->
+    <button id="hint"></button>
+    <p id="clue"></p>
 
-  </div>
+    <!-- Level -->
+    <div class="level-box">
+      Level: <span id="level">1</span>/10
+    </div>
+
+    <!-- Score -->
+    <div class="score">
+      Score:<div class="score1" id="score">0</div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="audio" src="../audio/Timer.mp3"></audio>
+
+</div>
 <script src="../js/animals.js"></script>
 </body>
+
 </html>

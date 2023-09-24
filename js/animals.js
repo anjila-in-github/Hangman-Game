@@ -66,7 +66,7 @@ var timerElement = document.getElementById('timer');
 var timeLeft = 60;
 var countdownInterval;
 
-function startTimer() {
+function startTimer() {    
     countdownInterval = setInterval(updateTimer, 1000);
 }
 
@@ -94,6 +94,7 @@ function resetTimer() {
     timerElement.textContent = "You're time starts now";
 }
 
+
 //Line above canvas
 var LivesP = document.getElementById('lives');
 function reset(){
@@ -104,6 +105,8 @@ function reset(){
 const generateWord = (optionValue) => {
     startTimer();
     reset();
+    let myAudio=document.querySelector('#audio')
+    myAudio.play();
     let optionsButtons = document.querySelectorAll(".options");
 
     //If option value matches the button innerText then highlight the button

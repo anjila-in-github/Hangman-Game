@@ -124,6 +124,8 @@ function reset(){
 const generateWord = (optionValue) => {
     startTimer();
     reset();
+    let myAudio=document.querySelector('#audio')
+    myAudio.play();
     let optionsButtons = document.querySelectorAll(".options");
 
     //If option value matches the button innerText then highlight the button
