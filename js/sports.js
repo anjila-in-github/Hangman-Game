@@ -132,7 +132,7 @@ const generateWord = (optionValue) => {
         "Played on boxing ring",
         "Ball played by hands",
         "Ball played by feet",
-        "Played by bouncing ball",
+        "Played by bouncing the ball",
         "Is a racket sport",
         "Hockey, stick and ball is used",
         "Is played in pitch",
