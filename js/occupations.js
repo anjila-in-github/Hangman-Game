@@ -137,7 +137,7 @@ const generateWord = (optionValue) => {
         "Checks teeth",
         "Deliver mails and parcel",
         "Flies areoplane",
-        "Clicks photoes",
+        "Clicks photos",
         "Paints"
     ];
     getHint.onclick = function () {

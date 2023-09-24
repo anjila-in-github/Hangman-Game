@@ -35,7 +35,7 @@ let chosenWord = "";
 
 //Display 
 const displayOptions = () => {
-    optionsContainer.innerHTML += `<h3>Guess <h2>SOPRTS</h2><h3> If You DARE <i class="fa fa-skull"></i> !</h3></h3>`;
+    optionsContainer.innerHTML += `<h3>Guess <h2>SPORTS</h2><h3> If You DARE <i class="fa fa-skull"></i> !</h3></h3>`;
     let buttonCon = document.createElement("div");
     for (let value in options) {
         buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')"><i class="fas fa-play"></i>${value}</button>`;
