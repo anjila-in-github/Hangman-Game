@@ -87,7 +87,6 @@ var timeLeft = 60;
 var countdownInterval;
 
 function startTimer() {
-    pauseAudio();
     countdownInterval = setInterval(updateTimer, 1000);
 }
 
@@ -104,7 +103,8 @@ function updateTimer() {
 }
 
 //Stoping Timer
-function myStopFunction() {
+function myStopFunction() {    
+    pauseAudio();
     clearInterval(countdownInterval);
 }
 

@@ -83,6 +83,7 @@ function updateTimer() {
 
 //Stoping Timer
 function myStopFunction() {
+    pauseAudio();
     clearInterval(countdownInterval);
 }
 
@@ -99,10 +100,24 @@ function reset(){
     LivesP.textContent = "";
 }
 
+// Audio
+var myAudio=document.querySelector('#audio')
+function playAudio(){
+    myAudio.play();
+}
+function pauseAudio(){
+    myAudio.pause();
+}    
+function stopAudio() {
+    myAudio.pause();
+    myAudio.currentTime = 0;
+}
+
 //Word Generator
 const generateWord = (optionValue) => {
     startTimer();
     reset();
+    playAudio();
     let myAudio=document.querySelector('#audio')
     myAudio.play();
     let optionsButtons = document.querySelectorAll(".options");
@@ -222,6 +237,7 @@ const initializer = () => {
                 //count==6 because head,body,left arm,right arm,left leg,right leg
                 console.log(count);
                 if (count == 6) {
+                    pauseAudio();
                     clearInterval(countdownInterval);
                     timerElement.textContent = "Time's Up!";
                     resultText.innerHTML = `<h2 class='lose-msg'>You Died!!</h2><p>The word was <span>${chosenWord}</span></p>`;
