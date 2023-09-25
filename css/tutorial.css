@@ -30,8 +30,8 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column-reverse;
-  background-color: #888888;
-  transition: background-color 1s;
+  background-color: #937bb0;
+  transition: background-color 2s;
 }
 body.animate {
   background-color: #f5b9ee;
@@ -58,7 +58,7 @@ button span {
   padding: 12px 42px;
   border-radius: 12px;
   font-size: 1.25rem;
-  background: #fec43b;
+  background: #b99646;
   transform: translateY(-6px);
 }
 
