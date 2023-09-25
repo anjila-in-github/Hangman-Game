@@ -84,6 +84,7 @@ function updateTimer() {
 
 //Stoping Timer
 function myStopFunction() {
+    pauseAudio();
     clearInterval(countdownInterval);
 }
 
@@ -94,19 +95,30 @@ function resetTimer() {
     timerElement.textContent = "You're time starts now";
 }
 
-
 //Line above canvas
 var LivesP = document.getElementById('lives');
 function reset(){
     LivesP.textContent = "";
 }
 
+// Audio
+var myAudio=document.querySelector('#audio')
+function playAudio(){
+    myAudio.play();
+}
+function pauseAudio(){
+    myAudio.pause();
+}    
+function stopAudio() {
+    myAudio.pause();
+    myAudio.currentTime = 0;
+}
+
 //Word Generator
 const generateWord = (optionValue) => {
     startTimer();
     reset();
-    let myAudio=document.querySelector('#audio')
-    myAudio.play();
+    playAudio();
     let optionsButtons = document.querySelectorAll(".options");
 
     //If option value matches the button innerText then highlight the button
@@ -196,7 +208,7 @@ const initializer = () => {
                         if (winCount == charArray.length) {
                             myStopFunction();
                             resultText.innerHTML = `<h2 class='win-msg'>You Won!!</h2><p>The word was <span>${chosenWord}</span></p>`;
-
+                            
                             var scoreElement = document.getElementById("score");
                             var currentScore = parseInt(scoreElement.innerText);
                             var newScore = currentScore + 20;
@@ -225,6 +237,7 @@ const initializer = () => {
                 //count==6 because head,body,left arm,right arm,left leg,right leg
                 console.log(count);
                 if (count == 6) {
+                    pauseAudio();
                     clearInterval(countdownInterval);
                     timerElement.textContent = "Time's Up!";
                     resultText.innerHTML = `<h2 class='lose-msg'>You Died!!</h2><p>The word was <span>${chosenWord}</span></p>`;
