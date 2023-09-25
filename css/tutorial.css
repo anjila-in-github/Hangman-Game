@@ -67,6 +67,7 @@ button:hover span {
 }
 #d-c{
   font-size: 20px;
+  color: #0C134F;
 }
 
 .hide {
@@ -77,8 +78,9 @@ a {
   position: fixed;
   top:2%;
   left:2%;
-  font-size: 20px;
-  color: #410404;
+  font-size: 30px;
+  color: #000000;
+  text-decoration: none;
 }
 
 .mama-llamas {

@@ -327,13 +327,13 @@ button:hover{
     font-weight: bold;
 }
 
-p {
+#play{
     text-align: left;
     font-size: 20px;
     color: #fff;
   }
   
-p a {
+#play a {
     text-decoration: none;
     color: #b091e3;
   }
