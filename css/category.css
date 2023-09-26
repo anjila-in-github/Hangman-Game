@@ -96,8 +96,9 @@ button:hover{
 
 p {
     text-align: left;
-    font-size: 20px;
+    font-size: 25px;
     color: #bd4242;
+    font-weight: bold;
   }
   
 p a {
