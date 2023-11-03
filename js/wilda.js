@@ -14,46 +14,16 @@ buttons.innerHTML = '<img src="../images/hint.jpg" />';
 //Values 
 var options = {
     Start: [
-        "Lungs",
-        "Brain",
-        "Heart",
-        "Muscles",
-        "Liver",
-        "Stomach",
-        "Kidney",
-        "Veins",
-        "Pancreas",
-        "Skeleton",
-        "Orange",
-        "Purple",
-        "Brown",
-        "Gray",
-        "Maroon",
-        "Magenta",
-        "Lavender",
-        "Silver",
-        "Coral",
-        "Violet",
-        "Nepal",
-        "Italy",
-        "France",
-        "Germany",
-        "Vietnam",
-        "Spain",
-        "Iran",
-        "Greece",
-        "Russia",
-        "Turkey", 
-        "Plam",
-       "Rosemary",
-       "Basil",
-       "Hemp",
-       "Olive" ,
-       "Elephant",
-       "Kangaroo",
-       "Dog",
-       "Cat",
-       "Donkey",    
+        "Giraffe",
+        "Tiger",
+        "Camel",
+        "Elephant",
+        "Kangaroo",
+        "Monkey",
+        "Leopard",
+        "Lion",
+        "Panda",
+        "Zebra"
     ],
 };
 
@@ -65,7 +35,7 @@ let chosenWord = "";
 
 //Display 
 const displayOptions = () => {
-    optionsContainer.innerHTML += `<h3>Guess <h2>EVERYTHING</h2><h3> If You DARE <i class="fa fa-skull"></i> !</h3></h3>`;
+    optionsContainer.innerHTML += `<h3>Guess <h2> WILD ANIMALS</h2><h3> If You DARE <i class="fa fa-skull"></i> !</h3></h3>`;
     let buttonCon = document.createElement("div");
     for (let value in options) {
         buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')"><i class="fas fa-play"></i>${value}</button>`;
@@ -96,7 +66,7 @@ var timerElement = document.getElementById('timer');
 var timeLeft = 60;
 var countdownInterval;
 
-function startTimer() {
+function startTimer() {    
     countdownInterval = setInterval(updateTimer, 1000);
 }
 
@@ -113,7 +83,7 @@ function updateTimer() {
 }
 
 //Stoping Timer
-function myStopFunction() {    
+function myStopFunction() {
     pauseAudio();
     clearInterval(countdownInterval);
 }
@@ -149,8 +119,6 @@ const generateWord = (optionValue) => {
     startTimer();
     reset();
     playAudio();
-    let myAudio=document.querySelector('#audio')
-    myAudio.play();
     let optionsButtons = document.querySelectorAll(".options");
 
     //If option value matches the button innerText then highlight the button
@@ -176,46 +144,16 @@ const generateWord = (optionValue) => {
     var showClue = document.getElementById("clue");
 
     var hints = [
-        "Pair of spongy,pinkish-gray organ in chest",
-        "Most important and complex organ in human body",
-        "Beats continuously to pump the blood",
-        "Connected to the bones by tendons",
-        "Largest solid organ ",
-        "J-shaped organ",
-        "Two Bean-shaped organ",
-        "Blood vessels that carry blood",
-        "Long,flat gland lies in abdomen",
-        "Internal framework of body",
-        "Mix of yellow and red color",
-        "Similar in appearance to violent light",
-        "Darker shade of orange",
-        "Neutral or achromatic color",
-        "Brownish crimson color",
-        "Reddish-purplish color",
-        "Light shade of violent or purple",
-        "Metallic Gray",
-        "Mix of Pink-orange color",
-        "Vivid blue-purple color",
-        "Landlocked country in SouthAsia",
-        "Located in the middle of Mediterranean Sea",
-        "Capital city:Paris",
-        "Celebrate an iconic festival like Christmas market",
-        "Currency:Vietnamese dong",
-        "Continent:Europe,Africa",
-        "Capital:Tehran",
-        "Country in south eastern Europe",
-        "Largest country in the world by area",
-        "Brounded by Black,Mediterranean and Aegean sea",
-        "Popular houseplant",
-        "Shurb with Fragrant",
-        "Culinary Herb",
-        "Provides healthy fats",
-        "Family of Oleaceace",
+        "Animal with spots",
+        "Animal with stripes",
+        "Can store water",
         "Biggest mammal on land",
         "Has a pouch to carry baby",
-        "Domestic descendant of wolf",
-        "Flesh-eating mannal",
-        "Animal belong to horse famliy"
+        "Can climb a tree",
+        "Belongs to cat family",
+        "Belongs to cat family",
+        "Eat bamboos",
+        "Animal with stripes"
     ];
     getHint.onclick = function () {
         //  showClue.textContent=i;
@@ -270,7 +208,7 @@ const initializer = () => {
                         if (winCount == charArray.length) {
                             myStopFunction();
                             resultText.innerHTML = `<h2 class='win-msg'>You Won!!</h2><p>The word was <span>${chosenWord}</span></p>`;
-
+                            
                             var scoreElement = document.getElementById("score");
                             var currentScore = parseInt(scoreElement.innerText);
                             var newScore = currentScore + 20;

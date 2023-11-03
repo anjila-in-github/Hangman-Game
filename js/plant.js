@@ -14,46 +14,16 @@ buttons.innerHTML = '<img src="../images/hint.jpg" />';
 //Values 
 var options = {
     Start: [
-        "Lungs",
-        "Brain",
-        "Heart",
-        "Muscles",
-        "Liver",
-        "Stomach",
-        "Kidney",
-        "Veins",
-        "Pancreas",
-        "Skeleton",
-        "Orange",
-        "Purple",
-        "Brown",
-        "Gray",
-        "Maroon",
-        "Magenta",
-        "Lavender",
-        "Silver",
-        "Coral",
-        "Violet",
-        "Nepal",
-        "Italy",
-        "France",
-        "Germany",
-        "Vietnam",
-        "Spain",
-        "Iran",
-        "Greece",
-        "Russia",
-        "Turkey", 
-        "Plam",
+       "Cactus",
+       "Rose",
+       "Grasses",
+       "Venus flytrap",
+       "Jade plant",
+       "Plam",
        "Rosemary",
        "Basil",
        "Hemp",
-       "Olive" ,
-       "Elephant",
-       "Kangaroo",
-       "Dog",
-       "Cat",
-       "Donkey",    
+       "Olive"
     ],
 };
 
@@ -65,7 +35,7 @@ let chosenWord = "";
 
 //Display 
 const displayOptions = () => {
-    optionsContainer.innerHTML += `<h3>Guess <h2>EVERYTHING</h2><h3> If You DARE <i class="fa fa-skull"></i> !</h3></h3>`;
+    optionsContainer.innerHTML += `<h3>Guess <h2>PLANTS</h2><h3> If You DARE <i class="fa fa-skull"></i> !</h3></h3>`;
     let buttonCon = document.createElement("div");
     for (let value in options) {
         buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')"><i class="fas fa-play"></i>${value}</button>`;
@@ -113,7 +83,7 @@ function updateTimer() {
 }
 
 //Stoping Timer
-function myStopFunction() {    
+function myStopFunction() {
     pauseAudio();
     clearInterval(countdownInterval);
 }
@@ -176,46 +146,16 @@ const generateWord = (optionValue) => {
     var showClue = document.getElementById("clue");
 
     var hints = [
-        "Pair of spongy,pinkish-gray organ in chest",
-        "Most important and complex organ in human body",
-        "Beats continuously to pump the blood",
-        "Connected to the bones by tendons",
-        "Largest solid organ ",
-        "J-shaped organ",
-        "Two Bean-shaped organ",
-        "Blood vessels that carry blood",
-        "Long,flat gland lies in abdomen",
-        "Internal framework of body",
-        "Mix of yellow and red color",
-        "Similar in appearance to violent light",
-        "Darker shade of orange",
-        "Neutral or achromatic color",
-        "Brownish crimson color",
-        "Reddish-purplish color",
-        "Light shade of violent or purple",
-        "Metallic Gray",
-        "Mix of Pink-orange color",
-        "Vivid blue-purple color",
-        "Landlocked country in SouthAsia",
-        "Located in the middle of Mediterranean Sea",
-        "Capital city:Paris",
-        "Celebrate an iconic festival like Christmas market",
-        "Currency:Vietnamese dong",
-        "Continent:Europe,Africa",
-        "Capital:Tehran",
-        "Country in south eastern Europe",
-        "Largest country in the world by area",
-        "Brounded by Black,Mediterranean and Aegean sea",
+        "Family of Cactaceae",
+        "Symbol of love and passion ",
+        "Plants having narrow leaves",
+        "Carnivorous eating plant",
+        "Plant juice that can cure skin warts",
         "Popular houseplant",
         "Shurb with Fragrant",
         "Culinary Herb",
         "Provides healthy fats",
-        "Family of Oleaceace",
-        "Biggest mammal on land",
-        "Has a pouch to carry baby",
-        "Domestic descendant of wolf",
-        "Flesh-eating mannal",
-        "Animal belong to horse famliy"
+        "Family of Oleaceace"
     ];
     getHint.onclick = function () {
         //  showClue.textContent=i;

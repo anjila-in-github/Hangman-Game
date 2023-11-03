@@ -19,11 +19,11 @@ var options = {
         "Camel",
         "Elephant",
         "Kangaroo",
-        "Monkey",
-        "Leopard",
-        "Lion",
-        "Panda",
-        "Zebra"
+        "Dog",
+        "Cat",
+        "Donkey",
+        "Goat",
+        "Sheep",
     ],
 };
 
@@ -149,11 +149,11 @@ const generateWord = (optionValue) => {
         "Can store water",
         "Biggest mammal on land",
         "Has a pouch to carry baby",
-        "Can climb a tree",
-        "Belongs to cat family",
-        "Belongs to cat family",
-        "Eat bamboos",
-        "Animal with stripes"
+        "Domestic descendant of wolf",
+        "Flesh-eating mannal",
+        "Animal belong to horse famliy",
+        "Similar as sheep",
+        "As similar as goat"
     ];
     getHint.onclick = function () {
         //  showClue.textContent=i;
