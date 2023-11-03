@@ -14,26 +14,7 @@ buttons.innerHTML = '<img src="../images/hint.jpg" />';
 //Values 
 var options = {
     Start: [
-        "Lungs",
-        "Brain",
-        "Heart",
-        "Muscles",
-        "Liver",
-        "Stomach",
-        "Kidney",
-        "Veins",
-        "Pancreas",
-        "Skeleton",
-        "Orange",
-        "Purple",
-        "Brown",
-        "Gray",
-        "Maroon",
-        "Magenta",
-        "Lavender",
-        "Silver",
-        "Coral",
-        "Violet",
+       
         "Nepal",
         "Italy",
         "France",
@@ -43,17 +24,7 @@ var options = {
         "Iran",
         "Greece",
         "Russia",
-        "Turkey", 
-        "Plam",
-       "Rosemary",
-       "Basil",
-       "Hemp",
-       "Olive" ,
-       "Elephant",
-       "Kangaroo",
-       "Dog",
-       "Cat",
-       "Donkey",    
+        "Turkey",        
     ],
 };
 
@@ -65,7 +36,7 @@ let chosenWord = "";
 
 //Display 
 const displayOptions = () => {
-    optionsContainer.innerHTML += `<h3>Guess <h2>EVERYTHING</h2><h3> If You DARE <i class="fa fa-skull"></i> !</h3></h3>`;
+    optionsContainer.innerHTML += `<h3>Guess <h2>COUNTRY</h2><h3> If You DARE <i class="fa fa-skull"></i> !</h3></h3>`;
     let buttonCon = document.createElement("div");
     for (let value in options) {
         buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')"><i class="fas fa-play"></i>${value}</button>`;
@@ -176,25 +147,6 @@ const generateWord = (optionValue) => {
     var showClue = document.getElementById("clue");
 
     var hints = [
-        "Pair of spongy,pinkish-gray organ in chest",
-        "Most important and complex organ in human body",
-        "Beats continuously to pump the blood",
-        "Connected to the bones by tendons",
-        "Largest solid organ ",
-        "J-shaped organ",
-        "Two Bean-shaped organ",
-        "Blood vessels that carry blood",
-        "Long,flat gland lies in abdomen",
-        "Internal framework of body",
-        "Mix of yellow and red color",
-        "Similar in appearance to violent light",
-        "Darker shade of orange",
-        "Neutral or achromatic color",
-        "Brownish crimson color",
-        "Reddish-purplish color",
-        "Light shade of violent or purple",
-        "Metallic Gray",
-        "Mix of Pink-orange color",
         "Vivid blue-purple color",
         "Landlocked country in SouthAsia",
         "Located in the middle of Mediterranean Sea",
@@ -205,17 +157,7 @@ const generateWord = (optionValue) => {
         "Capital:Tehran",
         "Country in south eastern Europe",
         "Largest country in the world by area",
-        "Brounded by Black,Mediterranean and Aegean sea",
-        "Popular houseplant",
-        "Shurb with Fragrant",
-        "Culinary Herb",
-        "Provides healthy fats",
-        "Family of Oleaceace",
-        "Biggest mammal on land",
-        "Has a pouch to carry baby",
-        "Domestic descendant of wolf",
-        "Flesh-eating mannal",
-        "Animal belong to horse famliy"
+        "Brounded by Black,Mediterranean and Aegean sea"
     ];
     getHint.onclick = function () {
         //  showClue.textContent=i;

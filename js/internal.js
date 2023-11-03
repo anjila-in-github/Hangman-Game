@@ -23,37 +23,9 @@ var options = {
         "Kidney",
         "Veins",
         "Pancreas",
-        "Skeleton",
-        "Orange",
-        "Purple",
-        "Brown",
-        "Gray",
-        "Maroon",
-        "Magenta",
-        "Lavender",
-        "Silver",
-        "Coral",
-        "Violet",
-        "Nepal",
-        "Italy",
-        "France",
-        "Germany",
-        "Vietnam",
-        "Spain",
-        "Iran",
-        "Greece",
-        "Russia",
-        "Turkey", 
-        "Plam",
-       "Rosemary",
-       "Basil",
-       "Hemp",
-       "Olive" ,
-       "Elephant",
-       "Kangaroo",
-       "Dog",
-       "Cat",
-       "Donkey",    
+        "Skeleton"
+
+               
     ],
 };
 
@@ -65,7 +37,7 @@ let chosenWord = "";
 
 //Display 
 const displayOptions = () => {
-    optionsContainer.innerHTML += `<h3>Guess <h2>EVERYTHING</h2><h3> If You DARE <i class="fa fa-skull"></i> !</h3></h3>`;
+    optionsContainer.innerHTML += `<h3>Guess <h2>INTERNAL ORGANS</h2><h3> If You DARE <i class="fa fa-skull"></i> !</h3></h3>`;
     let buttonCon = document.createElement("div");
     for (let value in options) {
         buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')"><i class="fas fa-play"></i>${value}</button>`;
@@ -185,37 +157,8 @@ const generateWord = (optionValue) => {
         "Two Bean-shaped organ",
         "Blood vessels that carry blood",
         "Long,flat gland lies in abdomen",
-        "Internal framework of body",
-        "Mix of yellow and red color",
-        "Similar in appearance to violent light",
-        "Darker shade of orange",
-        "Neutral or achromatic color",
-        "Brownish crimson color",
-        "Reddish-purplish color",
-        "Light shade of violent or purple",
-        "Metallic Gray",
-        "Mix of Pink-orange color",
-        "Vivid blue-purple color",
-        "Landlocked country in SouthAsia",
-        "Located in the middle of Mediterranean Sea",
-        "Capital city:Paris",
-        "Celebrate an iconic festival like Christmas market",
-        "Currency:Vietnamese dong",
-        "Continent:Europe,Africa",
-        "Capital:Tehran",
-        "Country in south eastern Europe",
-        "Largest country in the world by area",
-        "Brounded by Black,Mediterranean and Aegean sea",
-        "Popular houseplant",
-        "Shurb with Fragrant",
-        "Culinary Herb",
-        "Provides healthy fats",
-        "Family of Oleaceace",
-        "Biggest mammal on land",
-        "Has a pouch to carry baby",
-        "Domestic descendant of wolf",
-        "Flesh-eating mannal",
-        "Animal belong to horse famliy"
+        "Internal framework of body"
+       
     ];
     getHint.onclick = function () {
         //  showClue.textContent=i;
