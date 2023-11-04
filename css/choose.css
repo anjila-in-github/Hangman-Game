@@ -30,7 +30,7 @@ header{
     position: absolute;
     bottom:30px;
     display:flex;
-    gap: 60px;
+    gap: 200px;
 }
 .navigation li{
     position:relative; 
