@@ -1,4 +1,3 @@
-/*category*/
 *{
     font-family: "Poppins";
     margin:0; 
@@ -8,10 +7,12 @@
     border:none;
     text-decoration: none;
     text-transform: capitalize;
+    Overflow-y: hidden;
+    background:#0c192c;
 }
 
 .container{
-    background:#0c192c;
+   
     padding:15px 9%;
     padding-bottom: 100px;
 }
@@ -79,13 +80,28 @@
     font-weight: bold;     
     position:absolute;   
     top:5%;
-    left:80%;    
+    left:84%;    
     padding:1em;
     border-radius: 0.6em; 
     background:#605c75;
     color: #ffffff;   
-    cursor: pointer;      
-
+    cursor: pointer;  
+}
+.choose{   
+    display:flex;
+    justify-content:center;
+}
+.choose button{
+    font-size:15px;  
+    font-weight: bold;     
+    position:absolute;   
+    top:5%;
+    left:9%;    
+    padding:1em;
+    border-radius: 0.6em; 
+    background:#605c75;
+    color: #ffffff;   
+    cursor: pointer;  
 }
 button:hover{
     box-shadow: 0 0 5px cyan,
