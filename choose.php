@@ -1,3 +1,11 @@
+<?php
+    @include 'connect.php';
+    session_start();
+    if(!isset($_SESSION['user_name'])){
+        header('location:l.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,56 +18,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap'>
         <script src="https://kit.fontawesome.com/935834ea02.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="../css/choose.css">
+        <link rel="stylesheet" type="text/css" href="css/choose.css">
     </head>
     <body>
         <section>
             <header>
-        <h2>CHOOSE YOUR LEVEL 
-        <i class="fa-solid fa-skull"></i> </h2>
+                <h2>CHOOSE YOUR LEVEL <i class="fa-regular fa-face-smile-wink"></i> </h2>
             </header>
-            <div class="imgs">
-               
+            <div class="imgs">               
                 <div>
-                    <a href="ec.html">
-                    <img src="../images/easy.jpg" >
+                    <a href="html/ec.html">
+                        <img src="images/easy.jpg" >
                     </a>
-                    <a href="medc.html">
-                    <img src="../images/medium.jpg" >
+                    <a href="html/medc.html">
+                        <img src="images/medium.jpg" >
                     </a>
-                    <a href="difc.html">
-                    <img src="../images/diff.jpg" >
+                    <a href="html/difc.html">
+                        <img src="images/diff.jpg" >
                     </a>
-                    <a href="mix.html">
-                    <img src="../images/mixed.jpg" >
+                    <a href="html/mix.html">
+                        <img src="images/mixed.jpg" >
                     </a>
-
                 </div>
-
-
                 <div>
-                    <a href="ec.html">
-                    <img src="../images/easy.jpg" >
+                    <a href="html/ec.html">
+                        <img src="images/easy.jpg" >
                     </a>
-                    <a href="medc.html">
-                    <img src="../images/medium.jpg" >
+                    <a href="html/medc.html">
+                        <img src="images/medium.jpg" >
                     </a>
-                    <a href="difc.html">
-                    <img src="../images/diff.jpg" >
+                    <a href="html/difc.html">
+                        <img src="images/diff.jpg" >
                     </a>
-                    <a href="mix.html">
-                    <img src="../images/mixed.jpg" >
+                    <a href="html/mix.html">
+                        <img src="images/mixed.jpg" >
                     </a>
-
-                </div>
-   
-               
+                </div>              
             </div>
             
             <ul class="navigation">
-            <li class ="home"><a href="#"><i class="fa-solid fa-house"></i></a></li>
-            <li class="game"><a href="#"><i class="fa-solid fa-gamepad"></i></a></li>
-
+                <li class ="home"><a href="#"><i class="fa-solid fa-house"></i></a></li>
             </ul>
           
         </section>

@@ -1,13 +1,12 @@
-*
-{
+*{
+    font-family: "Poppins";
     background:#0c192c;
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    cursor: pointer;
+    cursor: pointer;    
+    text-transform: capitalize;
 }
-
 section{
     display: flex;
     justify-content: center;
@@ -25,45 +24,29 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-.navigation
-{
+.navigation{
     position: absolute;
     bottom:30px;
     display:flex;
-    gap: 60px;
 }
 .navigation li{
     position:relative; 
     list-style:  none;
 }
 .navigation li a{
-display: flex;
-justify-content: center;
-align-items: center;
-width: 80px;
-height: 80px;
-background: #fff;
-color: #333;
-box-shadow: 0 10px 25px rgba(0, 0, 0, 1);
-border-radius:50%;
-font-size: 1.5em;
-text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 1);
+    border-radius:50%;
+    font-size: 1.5em;
+    text-decoration: none;
 }
 .navigation li.home a{
-    background: rgb(255, 0, 162);
     color: aliceblue;
 }
-.navigation li a:hover{
-    color: rgb(212, 0, 255);
-}
-.navigation li.game a{
-    background: rgb(4, 255, 0);
-    color: aliceblue;
-}
-.navigation li a:hover{
-    color: rgb(212, 0, 255);
-}
-
 .imgs{
     position: absolute;
     left: 0;
@@ -82,12 +65,11 @@ text-decoration: none;
 {
     animation: animate2 40s linear infinite;
     animation-delay: -20s;
-
 }
 .imgs:hover div,
 .imgs:hover div:nth-child(2)
 {
-animation-play-state: paused ;
+    animation-play-state: paused ;
 }
 
 @keyframes animate{
@@ -125,13 +107,9 @@ animation-play-state: paused ;
 {
     opacity:1.5;
     filter:blur(5px);
-
 }
 .imgs div img:hover
 {
     opacity:0.5;
     filter:blur(0px);
 }
-
-
-

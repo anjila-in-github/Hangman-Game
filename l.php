@@ -1,31 +1,37 @@
 <?php
-require 'connect.php';
-  if(isset($_POST["submit"]))
-  {
-    $username=$_POST["username"];
-    $pwd=$_POST["pwd"];
-    $res=mysqli_query($conn,"SELECT * FROM login_data where username= '$username'");
-    $row=mysqli_fetch_assoc($res);
-    if(mysqli_num_rows($res)>0)
+@include 'connect.php';
+session_start();
+if(isset($_POST['submit'])){
+   $username =$_POST['username'];
+   $pwd = $_POST['pwd'];
+   $select = " SELECT * FROM login_data WHERE username= '$username'";
+   $result = mysqli_query($conn, $select);
+   
+   if(mysqli_num_rows($result) > 0){
+    $row=mysqli_fetch_array($result);
+    if($pwd==$row['pwd']){
+      if($row['user_type'] == 'Admin'){
+
+        $_SESSION['admin_name'] = $row['username'];
+        header('location:admin_page.php');
+  
+      }elseif($row['user_type'] == 'User'){
+  
+        $_SESSION['user_name'] = $row['username'];
+        header('location:choose.php');  
+     }   
+    }
+    else
     {
-      if($pwd==$row['pwd'])
-      {
-        $_SESSION["login"]=true;
-        $_SESSION["id"]=$row["id"];
-        header("Location:html/category.html");
-      }
-      else
-      {
-        echo
-        "<script> alert('Wrong Password');</script>";
-      }
+      $error[] = 'Wrong Password!';
     }
-    else{     
-        echo 
-        "<script> alert('User Not Registered');</script>";
-      
-    }
-  }
+   }
+   
+   else{
+      $error[] = 'User Not Registered!';
+   }
+
+};
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +56,17 @@ require 'connect.php';
 
   <div class="login-box">
     <h1>Login</h1>
+
+    <?php
+    if(isset($error))
+    {
+      foreach($error as $error)
+      {
+        echo '<span id="error-msg">'.$error.'</span>';
+      };
+    };
+    ?>
+
     <form class="" action="" method="post" autocomplete="off">
     <div class="input-group">
       <div class="user-box" >

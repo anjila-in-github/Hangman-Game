@@ -1,27 +1,28 @@
 <?php
-require 'connect.php';
-  if(isset($_POST["submit"]))
-  {
-    $username=$_POST["username"];
-    $pwd=$_POST["pwd"];
-    $cpwd=$_POST["cpwd"];
-    $res=mysqli_query($conn,"SELECT * FROM login_data where username= '$username'");
-    if(mysqli_num_rows($res)>0)
-    {
-      echo "<script> alert('Username has already been taken');</script>";
-    }
-    else{
-      if($pwd == $cpwd){
-        $query= "INSERT INTO login_data VALUES('$username','$pwd')";
-        mysqli_query($conn,$query);
-        echo "<script> alert('Registered Successfully');</script>";
+@include 'connect.php';
+if(isset($_POST['submit'])){
+
+   $username =$_POST['username'];
+   $pwd = $_POST['pwd'];
+   $cpwd =$_POST['cpwd'];
+   $user_type = $_POST['user_type'];
+   $select = " SELECT * FROM login_data WHERE username= '$username'";
+   $result = mysqli_query($conn, $select);
+
+   if(mysqli_num_rows($result) > 0){
+      $error[] = 'User already exist!';
+   }
+   else{
+      if($pwd != $cpwd){
+         $error[] = 'Password does not match!';
       }
-      else
-      {
-        echo "<script> alert('Password does not match');</script>";
+      else{
+         $insert = "INSERT INTO login_data(username, pwd, user_type) VALUES('$username','$pwd','$user_type')";
+         mysqli_query($conn, $insert);
+         $error[]='Registered Successfully';
       }
-    }
-  }
+   }
+};
 ?>
 
 <!DOCTYPE html>
@@ -46,6 +47,17 @@ require 'connect.php';
 
   <div class="login-box">
     <h1>Register</h1>
+
+    <?php
+    if(isset($error))
+    {
+      foreach($error as $error)
+      {
+        echo '<span class="error-msg">'.$error.'</span>';
+      };
+    };
+    ?>
+
     <form class="" action="" method="post" autocomplete="off">
     <div class="input-group">
       <div class="user-box" >
@@ -67,7 +79,13 @@ require 'connect.php';
         <label>
           <i class="fas fa-lock"></i> Confirm Password                 
         </label>                         
-      </div>      
+      </div>
+      
+      <div class="user-box">
+        <select name="user_type">
+          <option value="User">User</option>
+          <option value="Admin">Admin</option>
+        </select>
     </div>
 
     <div class="btn">   
