@@ -28,30 +28,30 @@
             <div class="imgs">               
                 <div>
                     <a href="html/ec.html">
-                        <img src="images/easy.jpg" >
+                        <img src="images/e.png" >
                     </a>
                     <a href="html/medc.html">
-                        <img src="images/medium.jpg" >
+                        <img src="images/me.png" >
                     </a>
                     <a href="html/difc.html">
-                        <img src="images/diff.jpg" >
+                        <img src="images/d.png" >
                     </a>
                     <a href="html/mix.html">
-                        <img src="images/mixed.jpg" >
+                        <img src="images/m.png" >
                     </a>
                 </div>
                 <div>
                     <a href="html/ec.html">
-                        <img src="images/easy.jpg" >
+                        <img src="images/e.png" >
                     </a>
                     <a href="html/medc.html">
-                        <img src="images/medium.jpg" >
+                        <img src="images/me.png" >
                     </a>
                     <a href="html/difc.html">
-                        <img src="images/diff.jpg" >
+                        <img src="images/d.png" >
                     </a>
                     <a href="html/mix.html">
-                        <img src="images/mixed.jpg" >
+                        <img src="images/m.png" >
                     </a>
                 </div>              
             </div>
