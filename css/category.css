@@ -37,14 +37,20 @@
     background: #fff;
     text-align: center;
     padding:30px 20px;
+    /* overflow: hidden; */
 }
 
 .container .box-container .box img{
     width: 80%;
     aspect-ratio: 4/3;
     object-fit: contain;
-
+    background: #fff;
+    /* transition: scale 400ms; */
 }
+/* 
+.container .box-container .box:hover img{
+    scale: 120%;
+} */
 
 .container .box-container .box .btn{
     margin-top: 10px;
