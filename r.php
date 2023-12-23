@@ -1,94 +1,162 @@
 <?php
 @include 'connect.php';
-if(isset($_POST['submit'])){
 
-   $username =$_POST['username'];
-   $pwd = $_POST['pwd'];
-   $cpwd =$_POST['cpwd'];
-   $user_type = $_POST['user_type'];
-   $select = " SELECT * FROM login_data WHERE username= '$username'";
-   $result = mysqli_query($conn, $select);
+$errors = [];
 
-   if(mysqli_num_rows($result) > 0){
-      $error[] = 'User already exist!';
-   }
-   else{
-      if($pwd != $cpwd){
-         $error[] = 'Password does not match!';
-      }
-      else{
-         $insert = "INSERT INTO login_data(username, pwd, user_type) VALUES('$username','$pwd','$user_type')";
-         mysqli_query($conn, $insert);
-         $error[]='Registered Successfully';
-      }
-   }
-};
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $pwd = $_POST['pwd'];
+    $cpwd = $_POST['cpwd'];
+
+    // Validate username
+    if (empty($username)) {
+        $errors[] = 'Username is required.';
+    }
+
+    // Validate email
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Valid email is required.';
+    }
+
+    // Validate password length
+    if (strlen($pwd) < 6) {
+        $errors[] = 'Password should be at least 6 characters long.';
+    }
+
+    // Check if user already exists
+    $select = "SELECT * FROM login_data WHERE username = '$username'";
+    $result = mysqli_query($conn, $select);
+
+    if (mysqli_num_rows($result) > 0) {
+        $errors[] = 'User already exists!';
+    }
+
+    // Check if passwords match
+    if ($pwd != $cpwd) {
+        $errors[] = 'Passwords do not match!';
+    }
+
+    // Perform the database operation only if there are no errors
+    if (empty($errors)) {
+        // Insert user data into the database
+        $hashedPassword = password_hash($pwd, PASSWORD_DEFAULT);
+        $insert = "INSERT INTO login_data (username, email, password) VALUES ('$username', '$email', '$hashedPassword')"; 
+        mysqli_query($conn, $insert);
+        $errors[] = 'Registered Successfully';
+    }
+}
 ?>
-
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <link rel='stylesheet' href= 'https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap'>  
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap'>
   <script src="https://kit.fontawesome.com/935834ea02.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/r.css">
 </head>
-<body>    
-  <div class="content1">
-    <h1>The</h1>
-  </div>
-        
-  <div class="content2">
-    <h1>Hangman</h1>
+<body>
+      
+  <div class="container" style="margin = auto ;padding: auto;">
+    <div class="content1">
+        <h1>The</h1>
+    </div>
+    
+    <div class="content2">
+        <h1>Hangman</h1>
+    </div>
   </div>
 
   <img class="js-tilt" src="images/login.png" alt="">
 
-  <div class="login-box">
+  <div class="login-box" style="margin-top:30px; padding:auto;">
     <h1>Register</h1>
 
     <?php
-    if(isset($error))
-    {
-      foreach($error as $error)
-      {
-        echo '<span class="error-msg">'.$error.'</span>';
-      };
-    };
+    if (!empty($errors)) {
+      foreach ($errors as $error) {
+        echo '<span class="error-msg" style = "color:red;">' . $error . '</span>';
+      }
+    }
     ?>
 
     <form class="" action="" method="post" autocomplete="off">
+
     <div class="input-group">
-      <div class="user-box" >
+      <div class="user-box">
         <input type="text" name="username" required="">      
         <label>
           <i class="fa-solid fa-user"></i>  Username
         </label>
       </div>
-      
+    </div>
+
+    <div class="input-group">
+      <div class="user-box">
+        <input type="email" name="email" required="">      
+        <label>
+          <i class="fa-solid fa-user"></i> email
+        </label>
+      </div> 
+    </div>
+  
+    <div class="input-group">     
       <div class="user-box">
         <input type="password" name="pwd" required="">
         <label>
           <i class="fas fa-lock"></i> Password                 
         </label>                         
       </div>
-        
+    <div>
+
+    <div class="input-group"> 
       <div class="user-box">
         <input type="password" name="cpwd" required="">
         <label>
           <i class="fas fa-lock"></i> Confirm Password                 
         </label>                         
       </div>
-      
-      <div class="user-box">
-        <select name="user_type">
-          <option value="User">User</option>
-          <option value="Admin">Admin</option>
-        </select>
-    </div>
+    </div> 
+           
+      <script>
+        var passwordInput = document.getElementById("pwd");
+        var confirmPasswordInput = document.getElementById("cpwd");
+        var delayTimer;
 
-    <div class="btn">   
+        passwordInput.addEventListener("input", function () {
+            clearTimeout(delayTimer);
+            delayTimer = setTimeout(validatePasswords, 500); // Adjust the delay if needed in milliseconds
+        });
+
+        confirmPasswordInput.addEventListener("input", function () {
+            clearTimeout(delayTimer);
+            delayTimer = setTimeout(validatePasswords, 500); // same as above comment
+        });
+
+        function validatePasswords() {
+            var password = passwordInput.value;
+            var confirmPassword = confirmPasswordInput.value;
+
+            // Check if both passwords have equal or greater length
+            if (confirmPassword.length >= password.length) {
+                // Check if passwords match
+                for (var i = 0; i < password.length; i++) {
+                    if (password[i] !== confirmPassword[i]) {
+                        // Passwords do not match
+                        alert("Passwords do not match!");
+                        // Redirect to the same page
+                        window.location.href = window.location.href;
+                        return;
+                    }
+                }
+                // Passwords match
+                console.log("Passwords match");
+            }
+        }
+    </script> 
+
+      <div class="btn">   
       <button type="submit" name="submit">
         <span></span>
         <span></span>
