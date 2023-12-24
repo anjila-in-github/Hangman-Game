@@ -40,8 +40,7 @@ if (isset($_POST['submit'])) {
     // Perform the database operation only if there are no errors
     if (empty($errors)) {
         // Insert user data into the database
-        $hashedPassword = password_hash($pwd, PASSWORD_DEFAULT);
-        $insert = "INSERT INTO login_data (username, email, password) VALUES ('$username', '$email', '$hashedPassword')"; 
+        $insert = "INSERT INTO login_data (username, email, password) VALUES ('$username', '$email', '$pwd')"; 
         mysqli_query($conn, $insert);
         $errors[] = 'Registered Successfully';
     }
