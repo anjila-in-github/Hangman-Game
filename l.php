@@ -9,15 +9,15 @@ if(isset($_POST['submit'])){
    
    if(mysqli_num_rows($result) > 0){
     $row=mysqli_fetch_array($result);
-    if($pwd==$row['pwd']){
-      if($row['user_type'] == 'Admin'){
+    if($pwd==$row['password']){
+      if($row['role'] == 0){
 
         $_SESSION['admin_name'] = $row['username'];
         header('location:admin_page.php');
   
-      }elseif($row['user_type'] == 'User'){
+      }elseif($row['role'] == 1){
   
-        $_SESSION['user_name'] = $row['username'];
+        $_SESSION['username'] = $row['username'];
         header('location:choose.php');  
      }   
     }
@@ -62,7 +62,7 @@ if(isset($_POST['submit'])){
     {
       foreach($error as $error)
       {
-        echo '<span id="error-msg" style = "color:red;">'.$error.'</span>';
+        echo '<span id="error-msg" style="color:red;">'.$error.'</span>';
       };
     };
     ?>
