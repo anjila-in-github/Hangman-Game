@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
   
       }elseif($row['role'] == 1){
   
-        $_SESSION['username'] = $row['username'];
+        $_SESSION['user_name'] = $row['username'];
         header('location:choose.php');  
      }   
     }
