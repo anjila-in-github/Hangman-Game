@@ -33,13 +33,13 @@ html {
     position: relative;  
     display: inline-block;  
   }
-  img {
+  /* img {
     float:right;
   }
-  
+   */
   .login-box {
     position: absolute;
-    top: 52%;
+    top: 54%;
     left: 50%;
     width: 450px;
     padding: 40px;

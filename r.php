@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
       
-  <div class="container" style="margin = auto ;padding: auto;">
+  <div class="container" style="margin : auto ;padding: auto;">
     <div class="content1">
         <h1>The</h1>
     </div>
@@ -67,7 +67,7 @@ if (isset($_POST['submit'])) {
     </div>
   </div>
 
-  <img class="js-tilt" src="images/login.png" alt="">
+  <!-- <img class="js-tilt" src="images/login.png" alt=""> -->
 
   <div class="login-box" style="margin-top:30px; padding:auto;">
     <h1>Register</h1>

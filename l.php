@@ -62,7 +62,7 @@ if(isset($_POST['submit'])){
     {
       foreach($error as $error)
       {
-        echo '<span id="error-msg">'.$error.'</span>';
+        echo '<span id="error-msg" style = "color:red;">'.$error.'</span>';
       };
     };
     ?>
