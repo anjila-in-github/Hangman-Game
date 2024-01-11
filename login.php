@@ -85,7 +85,7 @@ if(isset($_POST['submit'])){
     </div>
 
     <div class="btn">   
-        <button type="submit" name="submit" onclick="document.getElementById('audio').play()">
+        <button type="submit" name="submit">
           <span></span>
           <span></span>
           <span></span>

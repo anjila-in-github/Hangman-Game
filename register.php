@@ -95,7 +95,7 @@ if (isset($_POST['submit'])) {
       <div class="user-box">
         <input type="email" name="email" required="">      
         <label>
-          <i class="fa-solid fa-user"></i> email
+        <i class="fa-solid fa-envelope"></i> Email
         </label>
       </div> 
     </div>
