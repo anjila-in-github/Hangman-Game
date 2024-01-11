@@ -56,7 +56,7 @@ if(isset($_POST['submit'])){
 
   <div class="login-box">
     <h1>Login</h1>
-
+<!-- 
     <?php
     if(isset($error))
     {
@@ -65,7 +65,7 @@ if(isset($_POST['submit'])){
         echo '<span id="error-msg" style="color:red;">'.$error.'</span>';
       };
     };
-    ?>
+    ?> -->
 
     <form class="" action="" method="post" autocomplete="off">
     <div class="input-group">
@@ -93,7 +93,8 @@ if(isset($_POST['submit'])){
           Login Now
         </button>       
     </div>
-    <p>Don't have an account? <a href="r.php"> Register now!</a></p> 
+    <p>Lost Password<a href="#"> Click Here!</a></p>
+    <p>Don't have an account? <a href="register.php"> Register now!</a></p> 
 
     </form>    
   </div>

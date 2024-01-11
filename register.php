@@ -164,7 +164,7 @@ if (isset($_POST['submit'])) {
         Register Now
       </button>       
     </div>
-    <p>Already have an account?<a href="l.php"> Login now!</a></p> 
+    <p>Already have an account?<a href="login.php"> Login now!</a></p> 
     </form>
   </div>
 
