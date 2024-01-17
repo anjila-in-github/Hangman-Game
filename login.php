@@ -1,39 +1,40 @@
 <?php
 @include 'connect.php';
 session_start();
-if(isset($_POST['submit'])){
-   $username =$_POST['username'];
-   $pwd = $_POST['pwd'];
-   $select = " SELECT * FROM login_data WHERE username= '$username'";
-   $result = mysqli_query($conn, $select);
-   
-   if(mysqli_num_rows($result) > 0){
-    $row=mysqli_fetch_array($result);
-    if($pwd==$row['password']){
-      if($row['role'] == 0){
 
-        $_SESSION['admin_name'] = $row['username'];
-        header('location:admin_page.php');
-  
-      }elseif($row['role'] == 1){
-  
-        $_SESSION['user_name'] = $row['username'];
-        header('location:choose.php');  
-     }   
-    }
-    else
-    {
-      $error[] = 'Wrong Password!';
-    }
-   }
-   
-   else{
-      $error[] = 'User Not Registered!';
-   }
+$errors = [];
 
-};
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = $_POST['pwd'];
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    // Validate other fields if needed
+
+    // Check if user exists
+    $select = "SELECT * FROM login_data WHERE username = '$username'";
+    $result = mysqli_query($conn, $select);
+
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        // Verify password
+        if (password_verify($hashedPassword, $row['password'])) {
+            if ($row['role'] == 0) 
+                $_SESSION['admin_name'] = $row['username'];
+                header('location: admin_page.php');
+                exit();
+            } elseif ($row['role'] == 1) {
+                $_SESSION['user_name'] = $row['username'];
+                header('location: choose.php');
+                exit();
+            }
+        } else {
+            $errors[] = 'Wrong Password!';
+        }
+    } else {
+        $errors[] = 'User Not Registered!';
+    }
 ?>
-
 <!DOCTYPE html>
 <html lang="en" >
 <head>
