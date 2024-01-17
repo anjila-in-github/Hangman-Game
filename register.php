@@ -1,3 +1,4 @@
+
 <?php
 @include 'connect.php';
 
@@ -6,23 +7,11 @@ $errors = [];
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $pwd = $_POST['pwd'];
-    $cpwd = $_POST['cpwd'];
+    $password = $_POST['pwd'];
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT); // Hash the password
+    $role = 1; // Default role for users
 
-    // Validate username
-    if (empty($username)) {
-        $errors[] = 'Username is required.';
-    }
-
-    // Validate email
-    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = 'Valid email is required.';
-    }
-
-    // Validate password length
-    if (strlen($pwd) < 6) {
-        $errors[] = 'Password should be at least 6 characters long.';
-    }
+    // Validate other fields if needed
 
     // Check if user already exists
     $select = "SELECT * FROM login_data WHERE username = '$username'";
@@ -30,22 +19,17 @@ if (isset($_POST['submit'])) {
 
     if (mysqli_num_rows($result) > 0) {
         $errors[] = 'User already exists!';
-    }
-
-    // Check if passwords match
-    if ($pwd != $cpwd) {
-        $errors[] = 'Passwords do not match!';
-    }
-
-    // Perform the database operation only if there are no errors
-    if (empty($errors)) {
+    } else {
         // Insert user data into the database
-        $insert = "INSERT INTO login_data (username, email, password) VALUES ('$username', '$email', '$pwd')"; 
+        $insert = "INSERT INTO login_data (username, email, password, role) VALUES ('$username', '$email', '$hashedPassword', $role)";
         mysqli_query($conn, $insert);
         $errors[] = 'Registered Successfully';
+        header('location: login.php');
     }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
