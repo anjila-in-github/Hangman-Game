@@ -1,10 +1,13 @@
 <?php
-    @include 'connect.php';
-    session_start();
-    if(!isset($_SESSION['user_name'])){
-        header('location:l.php');
-    }
+session_start();
+if (!isset($_SESSION['user_name'])) {
+    header('Location: login.php'); // Redirect to the login page if not logged in
+    exit();
+}
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
