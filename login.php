@@ -1,40 +1,42 @@
 <?php
 @include 'connect.php';
 session_start();
-
 $errors = [];
 
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
-    $password = $_POST['pwd'];
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
+    $password = $_POST['password'];
     // Validate other fields if needed
 
     // Check if user exists
-    $select = "SELECT * FROM login_data WHERE username = '$username'";
+    $select = "SELECT * FROM user WHERE username = '$username'";
     $result = mysqli_query($conn, $select);
 
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         // Verify password
-        if (password_verify($hashedPassword, $row['password'])) {
-            if ($row['role'] == 0) 
+        if (password_verify($password, $row['password']))
+        {
+            if ($row['role'] == 0) {
                 $_SESSION['admin_name'] = $row['username'];
                 header('location: admin_page.php');
                 exit();
-            } elseif ($row['role'] == 1) {
+            }
+            else{
                 $_SESSION['user_name'] = $row['username'];
                 header('location: choose.php');
                 exit();
             }
-        } else {
-            $errors[] = 'Wrong Password!';
         }
-    } else {
-        $errors[] = 'User Not Registered!';
+        else {
+            $errors[] = 'Invalid Password!';
+        }
     }
-?>
+    else {
+             $errors[] = 'User Not Registered!';
+    }
+} ?>
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -57,16 +59,13 @@ if (isset($_POST['submit'])) {
 
   <div class="login-box">
     <h1>Login</h1>
-<!-- 
     <?php
-    if(isset($error))
-    {
-      foreach($error as $error)
-      {
-        echo '<span id="error-msg" style="color:red;">'.$error.'</span>';
-      };
-    };
-    ?> -->
+    if (!empty($errors)) {
+      foreach ($errors as $error) {
+        echo '<span class="error-msg" style = "color:red;">' . $error . '</span>';
+      }
+    }
+    ?>
 
     <form class="" action="" method="post" autocomplete="off">
     <div class="input-group">
@@ -78,7 +77,7 @@ if (isset($_POST['submit'])) {
       </div>
       
       <div class="user-box">
-        <input type="password" name="pwd" required="">
+        <input type="password" name="password" required="">
         <label>
           <i class="fas fa-lock"></i> Password                 
         </label>                         
@@ -87,14 +86,10 @@ if (isset($_POST['submit'])) {
 
     <div class="btn">   
         <button type="submit" name="submit">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
           Login Now
         </button>       
     </div>
-    <p>Lost Password<a href="#"> Click Here!</a></p>
+    <p>Forget Password<a href="send_reset_password.php"> Click Here!</a></p>
     <p>Don't have an account? <a href="register.php"> Register now!</a></p> 
 
     </form>    
