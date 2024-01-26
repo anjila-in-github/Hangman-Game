@@ -32,11 +32,7 @@ else{
    <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-
-
-
    <div class="login-form">
-
       
    <h2>ADMIN LOGIN PANEL</h2>
    <form method="POST" >
