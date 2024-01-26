@@ -56,17 +56,7 @@ else{
 <div class="extra">
    <a href="#">Forgot Password??</a>
 </div>
-
-
-
 </form>
-
-
-
 </div>
-
-
-
-
 </body>
 </html>
