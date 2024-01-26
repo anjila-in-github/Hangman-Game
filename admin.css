@@ -1,147 +1,135 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-*{
-   font-family: 'Poppins', sans-serif;
-   margin:0; padding:0;
-   box-sizing: border-box;
-   outline: none; border:none;
-   text-decoration: none;
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    text-decoration: none;
+    background-color: seashell;
+}
+body{
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+ 
+}
+div.login-form{
+    width: 450px;
+    background-color: white;
+    box-shadow: 0px 5px 10px black;
+   top: 70px;
+   left: 50%;
+
 }
 
-.container{
-   min-height: 100vh;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding:20px;
-   padding-bottom: 60px;
+div.login-form h2{
+    text-align: center;
+    background-color: #204969;
+    padding: 12px 0px;
+    color: white;
 }
-
-.container .content{
-   text-align: center;
+div.login-form form{
+    padding: 30px 60px;
 }
-
-.container .content h3{
-   font-size: 30px;
-   color:#333;
+div.login-form form div.input-field{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
 }
-
-.container .content h3 span{
-   background: crimson;
-   color:#fff;
-   border-radius: 5px;
-   padding:0 15px;
+div.login-form form div.input-field i{
+    color: darkslategray;
+    padding: 10px 14px;
+    background-color: #f2f4f6;
+    margin-right: 4px;
 }
-
-.container .content h1{
-   font-size: 50px;
-   color:#333;
+div.login-form form div.input-field input{
+    background-color: #f2f4f6;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    padding-left: 15px;
 }
-
-.container .content h1 span{
-   color:crimson;
+div.login-form form button{
+    width: 100%;
+    background-color: #5bd1d7;
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin: 15px 0;
+    transition: background-color 0.4s;
 }
-
-.container .content p{
-   font-size: 25px;
-   margin-bottom: 20px;
+div.login-form form button:hover{
+    background-color: #41b6e6;
 }
-
-.container .content .btn{
-   display: inline-block;
-   padding:10px 30px;
-   font-size: 20px;
-   background: #333;
-   color:#fff;
-   margin:0 5px;
-   text-transform: capitalize;
+div.login-form form div.extra{
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-
-.container .content .btn:hover{
-   background: crimson;
+div.login-form form div.extra a:first-child{
+    color: darkgrey;
 }
-
-.form-container{
-   min-height: 100vh;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding:20px;
-   padding-bottom: 60px;
-   background: #eee;
+div.login-form form div.extra a:last-child{
+    color: grey;
 }
-
-.form-container form{
-   padding:20px;
-   border-radius: 5px;
-   box-shadow: 0 5px 10px rgba(0,0,0,.1);
-   background: #fff;
-   text-align: center;
-   width: 500px;
+ 
+/*.box{
+    position: relative;
+    width: 450px;
+    height: 350px;
 }
-
-.form-container form h3{
-   font-size: 30px;
-   text-transform: uppercase;
-   margin-bottom: 10px;
-   color:#333;
+.box::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a),#0f0,#ff0,#0ff,#f0f,#0ff);
+    border-radius: 20px;
+    animation: rotating 4s linear infinite;
 }
-
-.form-container form input,
-.form-container form select{
-   width: 100%;
-   padding:10px 15px;
-   font-size: 17px;
-   margin:8px 0;
-   background: #eee;
-   border-radius: 5px;
+.box::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a),#0f0,#ff0,#0ff,#f0f,#0ff);
+    border-radius: 20px;
+    animation: rotating 4s linear infinite;
+filter:blur;
+opacity:0.75;
 }
-
-.form-container form select option{
-   background: #fff;
+.box span{
+position: absolute;
+inset: 4px;
+background:#222 ;
+border-radius:16px;
+z-index: 1;
 }
+@property --a{
+    syntax: '<angle>';
+    inherits:false;
+    initial-value: 0deg;
 
-.form-container form .form-btn{
-   background: #fbd0d9;
-   color:crimson;
-   text-transform: capitalize;
-   font-size: 20px;
-   cursor: pointer;
 }
+@keyframes rotating{
+0%{
+    --a: 0deg;
 
-.form-container form .form-btn:hover{
-   background: crimson;
-   color:#fff;
 }
-
-.form-container form p{
-   margin-top: 10px;
-   font-size: 20px;
-   color:#333;
+100%{
+    --a: 360deg;
 }
-
-.form-container form p a{
-   color:crimson;
 }
+/*.box.box{
+    position: absolute;
+    inset: 0 50px;
+    top: 75px;
 
-.form-container form .error-msg{
-   margin:10px 0;
-   display: block;
-   background: crimson;
-   color:#fff;
-   border-radius: 5px;
-   font-size: 20px;
-   padding:10px;
-} */
-*{
-   font-family: "Poppins";
-   margin:0; 
-   padding:0;
-   box-sizing: border-box;
-   outline: none; 
-   border:none;
-   text-decoration: none;
-   text-transform: capitalize;
-   background:#0c192c;
+    height: 150px;
+    width: 500px;
 }
-
