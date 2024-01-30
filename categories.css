@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+html{
+    font-size: 62.2%;
+    overflow-x: hidden;
+}
+.btn{
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding:1rem 3rem;
+    background: green;
+    color: white;
+    text-align: center;
+}
+.btn:hover{
+    background: black;
+}
+.message{
+    display: block;
+    background:aqua ;
+    padding: 1.5rem 1rem;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:black;
+    margin-bottom: 2rem;
+    align-content:center;
+}
+.container{
+    max-width: 1200px;
+    padding:2rem;
+    margin: 0 auto;
+
+}
+.admin-category-form-container.centered{
+
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+
+}
+.admin-category-form-container form{
+        max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgb(16, 31, 45);
+}
+.admin-category-form-container form h1{
+    text-transform: uppercase;
+    color: rgb(219, 13, 13);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.admin-category-form-container form .box
+{
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.7rem;
+    margin: 1rem 0;
+    background: white;
+    text-transform: none;
+}
+.category_display {
+      margin:2rem 0;
+}
+.category_display .category-display-table{
+    width: 100%;
+}
+.category_display .category-display-table thread{
+    background: #eeeeeecf; 
+}
+.category_display .category-display-table td{
+padding: 1rem;
+font-size: 2rem;
+border-bottom: blue;
+
+}
+.category_display .category-display-table th{
+    padding: 1rem;
+    font-size: 2rem;
+    
+    }
+    .category_display .category-display-table .btn:first-child{
+margin-top: 0;
+    }
+
+.category_display .category-display-table .btn:last-child{
+        background: crimson;
+            }
+.category_display .category-display-table .btn:last-child:hover{
+        background: black;
+                    }
+
+
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    
+}
+@media(max-width:768px){
+    .category_display{
+        overflow-y: scroll;
+    }
+    .category_display .category-display-table{
+        width: 80rem;
+    }
+}
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}

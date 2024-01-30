@@ -45,6 +45,19 @@
         <button name="Logout">Log Out</button>
     </form>
     </div>
+
+    <nav>
+        <div class="navbar">
+            <div class="menu">
+            <ul>
+                <li><a href="users.php">USERS</a></li>
+                <li><a href="categories.php">CATEGORIES</a></li>
+        </ul>
+        </div>
+        </div>
+        </nav>
+
+        
     <?php
     if(isset($_POST['Logout']))
     {
