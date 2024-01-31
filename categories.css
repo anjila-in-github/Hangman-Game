@@ -36,7 +36,7 @@ html{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:black;
     margin-bottom: 2rem;
-    align-content:center;
+    text-align:center;
 }
 .container{
     max-width: 1200px;

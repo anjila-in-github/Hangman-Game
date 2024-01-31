@@ -8,17 +8,19 @@ if(isset($_POST['update_category'])){
     $category_name=$_POST['category_name'];
         $category_image=$_FILES['category_image']['name'];
         $category_image_tmp_name=$_FILES['category_image']['tmp_name'];
-        $category_image_folder='uploaded_img/'.$category_image;
+        $category_image_folder='images/'.$category_image;
+
+
 if(empty($category_name)|| empty($category_image)){
     $message[]='Please fill out all';
 }else{
-    $update="UPDATE catgeory SET category_name='$category_name', image='category_image'
+    $update="UPDATE catgeory SET category_name='$category_name', image='$category_image'
     WHERE id=$id";
     $upload= mysqli_query($conn,$update);
     if($upload){
         move_uploaded_file($category_image_tmp_name,$category_image_folder);
     }else{
-        $message[]='couldnot add product';
+        $message[]='couldnot add category';
 
     }
 }
@@ -53,7 +55,7 @@ if(empty($category_name)|| empty($category_image)){
         ?>
             <form action ="<?php $_SERVER['PHP_SELF']?>" method="post" enctype="multipart/form-data">
             <h1> UPDATE CATEGORY</h1>
-            <input type ="text" placeholder="enter a category name" value="<?php $row[' category_name'];?>" name="category_name" class="box">
+            <input type ="text" placeholder="enter a category name" value="<?php $row['category_name'];?>" name="category_name" class="box">
             <input type ="file" accept="image/png,image/jpeg,image/jpg" name="category_image" class="box">
             <input type="submit" class="btn" name="update_category" value="update a category">
             <a href="categories.php" class="btn"> go back</a>

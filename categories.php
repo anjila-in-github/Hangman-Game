@@ -5,17 +5,17 @@ if(isset($_POST['add_category'])){
     $category_name=$_POST['category_name'];
         $category_image=$_FILES['category_image']['name'];
         $category_image_tmp_name=$_FILES['category_image']['tmp_name'];
-        $category_image_folder='uploaded_img/'.$category_image;
+        $category_image_folder='images/'.$category_image;
 if(empty($category_name)|| empty($category_image)){
     $message[]='Please fill out all';
 }else{
-    $insert="INSERT INTO catgeory( category_name,image)VALUES('$category_name','$category_image')";
+    $insert="INSERT INTO catgeory(category_name, image)VALUES('$category_name','$category_image')";
     $upload= mysqli_query($conn,$insert);
     if($upload){
         move_uploaded_file($category_image_tmp_name,$category_image_folder);
-          $message[]='new product added successfully';
+          $message[]='new category added successfully';
     }else{
-        $message[]='couldnot add product';
+        $message[]='couldnot add category';
 
     }
 }
@@ -51,7 +51,7 @@ if(isset($_GET['delete'])){
             <form action ="<?php $_SERVER['PHP_SELF']?>" method="post" enctype="multipart/form-data">
             <h1>ADD A NEW CATEGORY</h1>
             <input type ="text" placeholder="enter a category name" name="category_name" class="box">
-            <input type ="file" accept="image/png,image/jpeg,image/jpg" name="category_image" class="box">
+            <input type ="file" accept="image/png, image/jpeg, image/jpg" name="category_image" class="box">
             <input type="submit" class="btn" name="add_category" value="add a category">
 
             
